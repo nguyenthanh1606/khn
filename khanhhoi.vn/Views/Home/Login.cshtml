@@ -1,0 +1,457 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+@{
+
+    Layout = null;
+    String result = (String)Session["statusLogin"] != null ? (String)Session["statusLogin"] : "";
+    Session["statusLogin"] = null;
+    List<khanhhoi.vn.Models.ModelLanguage> listLang = ViewBag.listLang;
+    // string a = "";
+}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trang theo dõi thiêt bị định vị Viễn Thông Khánh Hội</title>
+    <link rel="icon" type="image/x-icon" href="/images/Logo.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic%7CPT+Serif:400,400italic%7CBree+Serif">
+    <link href="~/Content/css/semantic.min.css" rel="stylesheet" />
+    <link href="~/Content/css/popup.css" rel="stylesheet" />
+    <link href="~/Content/css/tab.css" rel="stylesheet" />
+    <link href="~/Content/css/flag.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/semantic.min.js"></script>
+    <link href="~/Content/css/Bellnoti.css?ver=27062020" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link href="~/Content/css/style.css?version=08072020&&1556" rel="stylesheet" />
+    <link href="~/Content/css/login.css?ver=08072020&&1556" rel="stylesheet" />
+    <link href="~/Content/css/responsive/responsive.css?ver=27062020" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/lobibox@1.2.7/css/lobibox.css" rel="stylesheet" />
+    <link href="" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+
+    <style type="text/css">
+        body > .grid {
+            height: 100%;
+        }
+
+        .column {
+            max-width: 450px;
+        }
+
+
+        .main.container {
+            margin-top: 7em;
+        }
+
+        .wireframe {
+            margin-top: 2em;
+        }
+
+        .ui.footer.segment {
+            padding: 0.22em;
+        }
+    </style>
+    <script type="text/javascript">
+        document.addEventListener("readystatechange", function (event) {
+            @{
+                if (Request.Cookies["userName_log"] != null && Request.Cookies["pass_log"] != null)
+                {
+                    @:document.getElementById('username').value = '@Request.Cookies["userName_log"].Value';
+                	@:document.getElementById('password').value = '@Request.Cookies["pass_log"].Value';
+                }
+                if (Request.Cookies["lang"] != null) {}
+            }
+            @{
+                if (result == "0") {
+                    @: showError();
+                }
+             }
+        });
+        var countload = 0;
+
+        function ajaxGetdata(idlang) {
+            // deviceID
+            // var idlang = document.getElementById('idlang').value;
+            if (countload == 0) {
+                countload += 1;
+                window.location = "Home/Change?languageFlag=" + idlang;
+            }
+            else {
+                window.location = "./Change?languageFlag=" + idlang;
+            }
+
+        };
+        function SubmitForm() {
+            // check field input user and password if empty
+            var name = document.forms["form_login"]["username"].value;
+            var password = document.forms["form_login"]["password"].value;
+
+            if (!name) {
+                $('.alert-danger.username').addClass('active');
+                return;
+            }
+            if (!password) {
+                $('.alert-danger.password').addClass('active');
+                return;
+            }
+            $('.form_login').addClass('active');
+
+            setInterval(function () {
+                document.getElementById("formLogin").submit();
+            }, 2000);
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            //$('#btnModal').click(function () {
+            //    $('.ui.modal.notifa').modal('show');
+            //})
+            $('#btnPay').click(function () {
+                $('.ui.modal.Pay').modal('show');
+            })
+            $('#btnSupport').click(function () {
+                $('.ui.modal.Support').modal('show');
+            })
+            $('.top.menu .item').tab();
+
+            $('.ui.form')
+              .form({
+                  fields: {
+                      email: {
+                          identifier: 'username',
+                          rules: [
+                            {
+                                type: 'empty',
+                                prompt: '@khanhhoi.vn.Resources.Language.tbvuilongnhaptendangnhap' //Vui lòng nhập tên đăng nhập
+                            },
+                          ]
+                      },
+                      password: {
+                          identifier: 'password',
+                          rules: [
+                            {
+                                type: 'empty',
+                                prompt: '@khanhhoi.vn.Resources.Language.tbvuilongnhapmatkhau' // Vui lòng nhập mật khẩu
+                            },
+                          ]
+                      }
+                  }
+              });
+        });
+    </script>
+    <script src="~/Scripts/login.js"></script>
+</head>
+
+<body>
+    <!-- notification when user does not exist-->
+    <div class="noti_error">
+        <div class="noti_error-content">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            <p class="message">Đăng nhập thất bại hoặc chưa được cấp quyền.</p>
+            <div class="line"></div>
+        </div>
+
+    </div>
+    <!--start menu-->
+    <div class="right menu animate__animated animate__swing">
+        <div class="bell-content">
+            <a class="ui containernoti item" id="btnModal">
+                <div class="notification notify show-count" data-count="2">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="bg animate__animated animate__fadeIn" ></div>
+    <div class="container">
+        <div class="noti-wrapper">
+            <div class="noti">
+                <div class="noti-content">
+                    <div class="noti_header">
+                        <i onclick="showNofi()" class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div class="noti-item">
+                        <div class="label_noti">
+                            <div class="timeline"></div>
+                            <div class="date_noti">
+                                1 ngày trước
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div>
+                                @khanhhoi.vn.Resources.Language.tbmuathietbi: <a href="#" class="read_more-btn">...</a>
+                                <p class="read_more-text">
+                                    <b>02862586777</b> hoặc <b>02862569777</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noti-item">
+                        <div class="label_noti">
+                            <div class="timeline"></div>
+                            <div class="date_noti">
+                                3 ngày trước
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div>
+                                @khanhhoi.vn.Resources.Language.tbbellone01a
+                                <a href="http://khanhhoi.vn" target="_blank">
+                                    <a href="#" class="read_more-btn">...</a>
+                                    <p class="read_more-text">
+                                        <b><u>www.khanhhoi.vn</u></b>
+                                </a>. @khanhhoi.vn.Resources.Language.tbbellone01a:
+                                <a href="http://khanhhoi.com.vn" target="_blank"><b><u>www.khanhhoi.com.vn</u></b></a>. @khanhhoi.vn.Resources.Language.tbbellone01c <b>02862569777 - 02862586777.</b> Xin cảm ơn!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid wrapper">
+        <div class="container">
+            <div class="ui fixed menu">
+                <div class="ui container">
+                    <a href="#" class="ui-content_right header item">
+                        <img class="logo" src="~/images/logo/Logokhanhhoi_150dpi.png">
+                        <p> Viễn Thông Khánh Hội</p>
+                    </a>
+                    <div onclick="toggle()" class="tab_bars">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                    <div class="ui-content_left bg-xanh">
+                        <a href="http://khanhhoi.net/" target="_blank" class="item">@khanhhoi.vn.Resources.Language.lbtrangchu</a>
+                        <div class="ui simple dropdown item">
+                            @khanhhoi.vn.Resources.Language.lbhotro <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" href="#" id="btnPay">@khanhhoi.vn.Resources.Language.lbthanhtoan</a>
+                                <a class="item" href="#" id="btnSupport">@khanhhoi.vn.Resources.Language.lbkythuat</a>
+                            </div>
+                        </div>
+                        <div class="ui simple dropdown item">
+                            Ngôn ngữ <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" href="javascript:ajaxGetdata('vi');" id="btnPay"><img width="20" src="~/images/flag/vietnam.svg" alt="Alternate Text" /></a>
+                                <a class="item" href="javascript:ajaxGetdata('en');" id="btnSupport"><img width="20" src="~/images/flag/united-kingdom.svg" alt="Alternate Text" /></a>
+                                <a class="item" href="javascript:ajaxGetdata('km');" id="btnSupport"><img width="20" src="~/images/flag/cambodia.svg" alt="Alternate Text" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end menu-->
+            <!-- ui payment-->
+            <div class="content_login">
+                <form action="~/Home/ValidateUser" method="post" class="form_login animate__animated animate__zoomInDown" id="formLogin" name="form_login" >
+                    <h2> @khanhhoi.vn.Resources.Language.lbdangnhap</h2>
+                    <div class="form-control">
+                        <label for="username">@khanhhoi.vn.Resources.Language.lbtendangnhap</label>
+                        <input id="username" name="username" type="text" placeholder="@khanhhoi.vn.Resources.Language.lbtendangnhap"/>
+                        <div class="alert alert-danger username" role="alert">
+                            <p class="animate__animated animate__fadeIn animate__faster">@khanhhoi.vn.Resources.Language.tbvuilongnhaptendangnhap</p>
+                        </div>
+                    </div>
+                    <div class="form-control mb-4">
+                        <label for="password" >@khanhhoi.vn.Resources.Language.lbmatkhau</label>
+                        <input id="password" name="password" type="password" placeholder="@khanhhoi.vn.Resources.Language.lbmatkhau"/>
+                        <div class="alert alert-danger password" role="alert">
+                            <p class="animate__animated animate__fadeIn animate__faster">@khanhhoi.vn.Resources.Language.tbvuilongnhapmatkhau</p>
+                            
+                        </div>
+                    </div>
+                    <a href="#"  onclick="SubmitForm();" class="btn-dangnhap">@khanhhoi.vn.Resources.Language.lbdangnhap</a>
+                </form>
+            </div>
+            <div class="ui modal Pay">
+                <div class="image content">
+                    <div class="ui medium image" style="align-self:center;">
+                        <img src="/images/logo/logo_khn.png">
+                    </div>
+                    <div class="description">
+                        <div class="ui header">@khanhhoi.vn.Resources.Language.tbbellone02</div>
+                        <div class="ui top attached tabular menu">
+                            <a class="item active" data-tab="first">@khanhhoi.vn.Resources.Language.lbhinhthuc1</a>
+                            <a class="item" data-tab="second">@khanhhoi.vn.Resources.Language.lbhinhthuc2</a>
+                        </div>
+                        <div class="ui bottom attached tab segment active" data-tab="first">
+                            <table class="ui celled table">
+                                <thead>
+                                    <tr>
+                                        <th>@khanhhoi.vn.Resources.Language.lbnganhang</th>
+                                        <th>@khanhhoi.vn.Resources.Language.lbtentaikhoan</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="ui image header">
+                                                <img src="/images/icon/vietcombank.png" class="ui mini rounded image">
+                                                <div class="content">
+                                                    Vietcombank CN Tp. HCM
+                                                    <div class="sub header">
+                                                        0071003220138
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Đặng Vũ Nghị
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui image header">
+                                                <img src="/images/icon/aribank.png" class="ui mini rounded image">
+                                                <div class="content">
+                                                    Agribank Bình Thạnh HCM
+                                                    <div class="sub header">
+                                                        6380205114300
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Đặng Vũ Nghị
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui image header">
+                                                <img src="/images/icon/sacombank-logo.png" class="ui mini rounded image">
+                                                <div class="content">
+                                                    Sacombank Tp. HCM
+                                                    <div class="sub header">
+                                                        060036580601
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Đặng Vũ Nghị
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="ui bottom attached tab segment" data-tab="second">
+                            <div class="ui icon message">
+                                <i class="home icon"></i>
+                                <div class="content">
+                                    <div class="header">
+                                        @khanhhoi.vn.Resources.Language.lbthanhtoantructieptai
+                                    </div>
+                                    <p>@khanhhoi.vn.Resources.Language.lbdiachi_cty</p>
+                                </div>
+                            </div>
+                            <div class="ui icon message">
+                                <i class="phone icon"></i>
+                                <div class="ui mini horizontal divided list">
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">028 625 69 777</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">028 625 86 777</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="content">
+                                            <div class="header">1900636799</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="ui cancel button">@khanhhoi.vn.Resources.Language.lbdong</div>
+                </div>
+            </div>
+            <div class="ui modal Support">
+                <i class="close icon"></i>
+                <div class="header">@khanhhoi.vn.Resources.Language.lbhotrokhachhang</div>
+                <div class="image content">
+                    <div class="ui medium image">
+                        <img src="/images/support-icon.png">
+                    </div>
+                    <div class="description">
+                        <div class="ui feed">
+                            <div class="event">
+                                <div class="label">
+                                    <i class="phone square icon"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="date">@khanhhoi.vn.Resources.Language.lbdienthoai</div>
+                                    <div class="summary">
+                                        <a>0916822838</a> | <a>02862586777</a> | <a>02862569777</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="label">
+                                    <i class="phone square icon"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="date">@khanhhoi.vn.Resources.Language.lbdidong</div>
+                                    <div class="summary">
+                                        <a>0977082838</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="event">
+                                <div class="label">
+                                    <i class="envelope open icon"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="date">Mail</div>
+                                    <div class="summary">
+                                        <a>infor@khanhhoi.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="label">
+                                    <i class="home icon"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="date">@khanhhoi.vn.Resources.Language.lbtrusovanphong</div>
+                                    <div class="summary">
+                                        <a>@khanhhoi.vn.Resources.Language.lbdiachi_cty</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="label">
+                                    <i class="home icon"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="date">@khanhhoi.vn.Resources.Language.lbchinhanh1</div>
+                                    <div class="summary">
+                                        <a>Tân Thành, Tam Quan Bắc, Hoài Nhơn, Bình Định</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    <div class="blur"></div>
+    @* end new version *@
+    <script src="~/Scripts/popup.js"></script>
+    <script src="~/Scripts/modal.js"></script>
+    <script src="~/Scripts/tab.js"></script>
+    <script src="~/Scripts/login.js?version=08072020&&1556"></script>
+</body>
+</html>

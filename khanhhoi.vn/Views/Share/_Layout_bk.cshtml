@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CÔNG TY TNHH VIỄN THÔNG KHÁNH HỘI</title>
+    <!-- for-mobile-apps -->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0' name='viewport' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/Datetimepicker/jquery-1.8.3.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="~/Scripts/Datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script src="~/Scripts/Datetimepicker/bootstrap-datetimepicker.fr.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBeyBqnIIC1RaRL1hXZ9f05KiRdvWKrIws&libraries=places,geometry,drawing"></script>
+    <script src="~/Scripts/Gmap/v3_epoly.js"></script>
+    <script src="~/Scripts/markerwithlabel.js"></script>
+    <script src="~/Scripts/Gmap/markerclusterer.js"></script>
+    <script src="~/Scripts/Gmap/markerclusterer_compiled.js"></script>
+    <link href="~/Content/css/stylemain.css" rel="stylesheet" />
+    <link href="~/Content/css/rate.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script type="text/javascript">
+        function ActionMenu(index) {
+            var alert_txt = "";
+            switch (index) {
+                case 1:
+                    location.href = "Logout";
+                    break;
+                default:
+                    break;
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div id="logo" style="position:relative;">
+            <a href="/Home/Index">
+                <img id="imgLogo" style="height: 75px" src="~/images/logo/logo_khn.png" alt="Viễn Thông Khánh Hội">
+            </a>
+        </div>
+        <div id="header-right" class="collapse navbar-collapse">
+            <div id="header-auto">
+                <div class="row">
+                    <div class="pull-right">
+                        <div class="dropdown upper-links">
+                            <a class="links dropdown-toggle dropdown_a" data-toggle="dropdown" href="#" style="font-weight:bold;">
+                                @(Request.Cookies["userName"] == null ? "" : Request.Cookies["userName"].Value)
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" style="text-align: left;">
+                                <li>
+                                    <div>
+                                        <img src="~/images/icon/User.png" alt="">
+                                    </div>
+                                    <div>
+                                        <a id="show_admin" href="#">Thông tin tài khoản</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown upper-links">
+                            <a class="dropdown-toggle dropdown_a" data-toggle="dropdown" href="#">
+                                Hướng dẫn
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div>
+                                        <img src="~/images/icon/folder-documents-icon.png" />
+                                    </div>
+                                    <div>
+                                        <a href="#">HD sử dụng website</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="upper-links">
+                            <img src="~/images/icon/logout-icon.png" alt="Đăng xuất">
+                            <a onclick="ActionMenu(1);" href="#">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navbar">
+                <div class="navbar navbar-nav navbar-right">
+                    <a href="/Home/Index"><img src="../images/icon/track_icon.png">Giám sát</a>
+                    @*<div class="dropdown">
+                            <button class="dropbtn">
+                                <img src="../images/icon/track_icon.png">
+                                Giám sát
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Giám sát nhiều xe</a>
+                                <a href="#">Giám sát xe trung tâm</a>
+                            </div>
+                        </div>*@
+                    @*<a href="#news"><img src="../images/icon/review_icon.gif"> Lộ trình</a>*@
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <img src="../images/icon/statistic_icon.gif">
+                            Báo cáo
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" id="show_bgt">Báo cáo Bộ Giao Thông</a>
+                            <a href="#" id="show_business">Báo cáo Doanh Nghiệp</a>
+                        </div>
+                    </div>
+                    <a id="show_tienich" href="#"><img src="../images/icon/tool-box-preferences-icon.png"> Tiện ích</a>
+                    @*<a href="#"><img src="../images/icon/General-icon.png"> TCĐBVN</a>*@
+                    @*<a id="show_quantri" href="#"><img src="../images/icon/Admin-icon.png"> Quản trị</a>*@
+                    <a id="show_comment" href="#"><img src="../images/icon/comment_icon.png"> Phản hồi</a>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="main">
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/Main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lbbaocao" xml:space="preserve">
+    <value>Báo cáo</value>
+  </data>
+  <data name="lbbaocaobatdieuhoa" xml:space="preserve">
+    <value>Báo cáo bật điều hoà</value>
+  </data>
+  <data name="lbbaocaobogiaothong" xml:space="preserve">
+    <value>Báo cáo Bộ Giao Thông</value>
+  </data>
+  <data name="lbbaocaochitiethoatdong" xml:space="preserve">
+    <value>Báo cáo chi tiết hoạt động</value>
+  </data>
+  <data name="lbbaocaochitiethoatdong_content" xml:space="preserve">
+    <value>BÁO CÁO CHI TIẾT HOẠT ĐỘNG</value>
+  </data>
+  <data name="lbbaocaochitietvipham10gio_content" xml:space="preserve">
+    <value>BÁO CÁO CHI TIẾT VI PHẠM THỜI GIAN LÁI XE LIÊN TỤC (10 GIỜ)</value>
+  </data>
+  <data name="lbbaocaochitietvipham4gio_content" xml:space="preserve">
+    <value>BÁO CÁO CHI TIẾT VI PHẠM THỜI GIAN LÁI XE LIÊN TỤC (4 GIỜ)</value>
+  </data>
+  <data name="lbbaocaodoanhnghiep" xml:space="preserve">
+    <value>Báo cáo Doanh Nghiệp</value>
+  </data>
+  <data name="lbbaocaodungdo" xml:space="preserve">
+    <value>Báo cáo dừng đỗ</value>
+  </data>
+  <data name="lbbaocaodungdo_content" xml:space="preserve">
+    <value>BÁO CÁO DỪNG ĐỖ</value>
+  </data>
+  <data name="lbbaocaohanhtrinhxechay_content" xml:space="preserve">
+    <value>BÁO CÁO HÀNH TRÌNH XE CHẠY</value>
+  </data>
+  <data name="lbbaocaohoatdong" xml:space="preserve">
+    <value>Báo cáo hoạt động</value>
+  </data>
+  <data name="lbbaocaomaylanh_content" xml:space="preserve">
+    <value>BÁO CÁO MÁY LẠNH</value>
+  </data>
+  <data name="lbbaocaonhienlieu" xml:space="preserve">
+    <value>Báo cáo nhiên liệu</value>
+  </data>
+  <data name="lbbaocaoquatocdogioihan_content" xml:space="preserve">
+    <value>BÁO CÁO QUÁ TỐC ĐỘ GIỚI HẠN</value>
+  </data>
+  <data name="lbbaocaotatmokhoadien" xml:space="preserve">
+    <value>Báo cáo tắt/mở khoá điện</value>
+  </data>
+  <data name="lbbaocaotatmokhoadien_content" xml:space="preserve">
+    <value>BÁO CÁO TẮT/MỞ KHOÁ ĐIỆN</value>
+  </data>
+  <data name="lbbaocaotatmomototai" xml:space="preserve">
+    <value>Báo cáo tắt/mở mô tơ tải</value>
+  </data>
+  <data name="lbbaocaotatmomototai_content" xml:space="preserve">
+    <value>BÁO CÁO TẮT/MỞ MÔ TỞ TẢI</value>
+  </data>
+  <data name="lbbaocaothapcau" xml:space="preserve">
+    <value>Báo cáo tháp cẩu</value>
+  </data>
+  <data name="lbbaocaothoigianlaixelientuc_content" xml:space="preserve">
+    <value>BÁO CÁO THỜI GIAN LÁI XE LIÊN TỤC</value>
+  </data>
+  <data name="lbbaocaothoigianlaixetrongngay" xml:space="preserve">
+    <value>Báo cáo thời gian lái xe trong ngày</value>
+  </data>
+  <data name="lbbaocaothoigianlaixetrongngay_content" xml:space="preserve">
+    <value>BÁO CÁO THỜI GIAN LÁI XE TRONG NGÀY</value>
+  </data>
+  <data name="lbbaocaotocdoxechay_content" xml:space="preserve">
+    <value>BÁO CÁO TỐC ĐỘ XE CHẠY</value>
+  </data>
+  <data name="lbbaocaotonghop" xml:space="preserve">
+    <value>Báo cáo tổng hợp</value>
+  </data>
+  <data name="lbbaocaotonghophoatdong" xml:space="preserve">
+    <value>Báo cáo tổng hợp hoạt động</value>
+  </data>
+  <data name="lbbaocaotonghophoatdong_content" xml:space="preserve">
+    <value>BÁO CÁO TỔNG HỢP HOẠT ĐỘNG</value>
+  </data>
+  <data name="lbbaocaotonghopkmxehoatdong" xml:space="preserve">
+    <value>Báo cáo tổng hợp km xe hoạt động</value>
+  </data>
+  <data name="lbbaocaotonghoptheolaixe" xml:space="preserve">
+    <value>Báo cáo tổng hợp theo lái xe</value>
+  </data>
+  <data name="lbbaocaotonghoptheolaixe_content" xml:space="preserve">
+    <value>BÁO CÁO TỔNG HỢP THEO LÁI XE</value>
+  </data>
+  <data name="lbbaocaotonghoptheoxe" xml:space="preserve">
+    <value>Báo cáo tổng hợp theo xe</value>
+  </data>
+  <data name="lbbaocaotonghoptheoxe_content" xml:space="preserve">
+    <value>BÁO CÁO TỔNG HỢP THEO XE</value>
+  </data>
+  <data name="lbbaocaotonghoptieuhaonhienlieu" xml:space="preserve">
+    <value>Báo cáo tổng hợp tiêu hao nhiên liệu</value>
+  </data>
+  <data name="lbbaocaotonghoptieuhaonhienlieu_content" xml:space="preserve">
+    <value>BÁO CÁO TỔNG HỢP TIÊU HAO NHIÊN LIỆU</value>
+  </data>
+  <data name="lbbaocaott09_bgt" xml:space="preserve">
+    <value>Báo cáo TT09/2015/TT - BGTVT</value>
+  </data>
+  <data name="lbbaocaott73_bgt" xml:space="preserve">
+    <value>Báo cáo TT73/2014/TT - BGTVT</value>
+  </data>
+  <data name="lbbatdau" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
+  <data name="lbbienso" xml:space="preserve">
+    <value>Biển số</value>
+  </data>
+  <data name="lbcaiapp" xml:space="preserve">
+    <value>Cài app trên điện thoại của bạn</value>
+  </data>
+  <data name="lbcaocaotonghopkmxehoatdong_content" xml:space="preserve">
+    <value>BÁO CÁO TỔNG HỢP KM XE HOẠT ĐỘNG</value>
+  </data>
+  <data name="lbcauhinhhienthilotrinh" xml:space="preserve">
+    <value>Cấu hình hiển thị lộ trình</value>
+  </data>
+  <data name="lbchinhanh1" xml:space="preserve">
+    <value>Chi nhánh 1</value>
+  </data>
+  <data name="lbchitietvipham10gio" xml:space="preserve">
+    <value>Chi tiết vi phạm thời gian lái xe liên tục (10 giờ)</value>
+  </data>
+  <data name="lbchitietvipham4gio" xml:space="preserve">
+    <value>Chi tiết vi phạm thời gian lái xe liên tục (4 giờ)</value>
+  </data>
+  <data name="lbchoncauhinh" xml:space="preserve">
+    <value>Chọn cấu hình</value>
+  </data>
+  <data name="lbchonhinh" xml:space="preserve">
+    <value>Chọn hình...</value>
+  </data>
+  <data name="lbchonngay" xml:space="preserve">
+    <value>Chọn ngày</value>
+  </data>
+  <data name="lbcua" xml:space="preserve">
+    <value>Cửa</value>
+  </data>
+  <data name="lbdangcapnhatdulieu" xml:space="preserve">
+    <value>Đang cập nhật dữ liệu, vui lòng chờ giây lát..</value>
+  </data>
+  <data name="lbdangnhaptaikhoan" xml:space="preserve">
+    <value>Đăng nhập tài khoản</value>
+  </data>
+  <data name="lbdangxuat" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="lbdanhgiachatluongdichvu" xml:space="preserve">
+    <value>Đánh giá chất lượng dịch vụ</value>
+  </data>
+  <data name="lbdanhmucthe" xml:space="preserve">
+    <value>Danh mục thẻ</value>
+  </data>
+  <data name="lbdanhsachlaixe" xml:space="preserve">
+    <value>Danh sách lái xe</value>
+  </data>
+  <data name="lbdanhsachnguoidung" xml:space="preserve">
+    <value>Danh sách người dùng</value>
+  </data>
+  <data name="lbdanhsachsim" xml:space="preserve">
+    <value>Danh sách sim</value>
+  </data>
+  <data name="lbdanhsachthongbao" xml:space="preserve">
+    <value>Danh sách thông báo</value>
+  </data>
+  <data name="lbdanhsachxe" xml:space="preserve">
+    <value>Danh sách xe</value>
+  </data>
+  <data name="lbden" xml:space="preserve">
+    <value>Đến</value>
+  </data>
+  <data name="lbdenluc" xml:space="preserve">
+    <value>Đến lúc</value>
+  </data>
+  <data name="lbdenngay" xml:space="preserve">
+    <value>Đến ngày</value>
+  </data>
+  <data name="lbdiachi" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="lbdiachibatdau" xml:space="preserve">
+    <value>Địa chỉ bắt đầu</value>
+  </data>
+  <data name="lbdiachiketthuc" xml:space="preserve">
+    <value>Địa chỉ kết thúc</value>
+  </data>
+  <data name="lbdiachi_cty" xml:space="preserve">
+    <value>184/1 Nguyễn Văn Khối, P.09, Q.Gò Vấp, HCM</value>
+  </data>
+  <data name="lbdiadiem" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="lbdiadiembatdau" xml:space="preserve">
+    <value>Địa điểm bắt đầu</value>
+  </data>
+  <data name="lbdiadiemgannhat" xml:space="preserve">
+    <value>Địa điểm gần nhất</value>
+  </data>
+  <data name="lbdiadiemketthuc" xml:space="preserve">
+    <value>Địa điểm kết thúc</value>
+  </data>
+  <data name="lbdichuyen" xml:space="preserve">
+    <value>Di chuyển</value>
+  </data>
+  <data name="lbdidong" xml:space="preserve">
+    <value>Di động</value>
+  </data>
+  <data name="lbdienthoai" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="lbdong" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="lbdungdo" xml:space="preserve">
+    <value>Dừng đỗ</value>
+  </data>
+  <data name="lbghichumattinhieu" xml:space="preserve">
+    <value>Ghi chú mất tín hiệu</value>
+  </data>
+  <data name="lbgiamsat" xml:space="preserve">
+    <value>Giám sát</value>
+  </data>
+  <data name="lbgopdungdo" xml:space="preserve">
+    <value>Gộp dừng đỗ</value>
+  </data>
+  <data name="lbgplx" xml:space="preserve">
+    <value>GPLX</value>
+  </data>
+  <data name="lbgpstot" xml:space="preserve">
+    <value>GPS tốt.</value>
+  </data>
+  <data name="lbguiphanhoi" xml:space="preserve">
+    <value>Gửi phản hồi</value>
+  </data>
+  <data name="lbhang" xml:space="preserve">
+    <value>Hạng</value>
+  </data>
+  <data name="lbhanhtrinhxechay" xml:space="preserve">
+    <value>Hành trình xe chạy</value>
+  </data>
+  <data name="lbhethandichvu" xml:space="preserve">
+    <value>Hết hạn dịch vụ</value>
+  </data>
+  <data name="lbhotro" xml:space="preserve">
+    <value>Hỗ trợ</value>
+  </data>
+  <data name="lbhotrokhachhang" xml:space="preserve">
+    <value>Hỗ trợ khách hàng</value>
+  </data>
+  <data name="lbhovaten" xml:space="preserve">
+    <value>Họ và tên</value>
+  </data>
+  <data name="lbhuongdan" xml:space="preserve">
+    <value>Hướng dẫn</value>
+  </data>
+  <data name="lbimei" xml:space="preserve">
+    <value>Imei</value>
+  </data>
+  <data name="lbkeodai" xml:space="preserve">
+    <value>Kéo dài</value>
+  </data>
+  <data name="lbketthuc" xml:space="preserve">
+    <value>Kết thúc</value>
+  </data>
+  <data name="lbkhoa" xml:space="preserve">
+    <value>Khoá</value>
+  </data>
+  <data name="lbkythuat" xml:space="preserve">
+    <value>Kỹ thuật</value>
+  </data>
+  <data name="lblangnghedephattrien" xml:space="preserve">
+    <value>LẮNG NGHE ĐỂ PHÁT TRIỂN</value>
+  </data>
+  <data name="lblit" xml:space="preserve">
+    <value>Lít</value>
+  </data>
+  <data name="lbluuy" xml:space="preserve">
+    <value>Lưu ý: ứng dụng chạy tốt nhất trên các trình duyệt</value>
+  </data>
+  <data name="lbmatgps" xml:space="preserve">
+    <value>Mất GPS.</value>
+  </data>
+  <data name="lbmatkhau" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="lbmatkhaucu" xml:space="preserve">
+    <value>Mật khẩu cũ</value>
+  </data>
+  <data name="lbmatkhaumoi" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="lbmattinhieu" xml:space="preserve">
+    <value>Mất tín hiệu</value>
+  </data>
+  <data name="lbmattinhieuGPS01" xml:space="preserve">
+    <value>Mất tín hiệu GPS &gt; 5 phút và nhỏ hơn 150 phút</value>
+  </data>
+  <data name="lbmaylanh" xml:space="preserve">
+    <value>Máy lạnh</value>
+  </data>
+  <data name="lbmo" xml:space="preserve">
+    <value>Mở</value>
+  </data>
+  <data name="lbmokhoadien" xml:space="preserve">
+    <value>Mở khoá điện</value>
+  </data>
+  <data name="lbmomay" xml:space="preserve">
+    <value>Mở máy</value>
+  </data>
+  <data name="lbnapthongtinlaixe" xml:space="preserve">
+    <value>Nạp thông tin lái xe</value>
+  </data>
+  <data name="lbnganhang" xml:space="preserve">
+    <value>Ngân hàng</value>
+  </data>
+  <data name="lbngayhethan" xml:space="preserve">
+    <value>Ngày hết hạn</value>
+  </data>
+  <data name="lbngayhethandichvu" xml:space="preserve">
+    <value>Ngày hết hạn dịch vụ</value>
+  </data>
+  <data name="lbngaytao" xml:space="preserve">
+    <value>ngày tạo</value>
+  </data>
+  <data name="lbnguoidungnhancanhbao" xml:space="preserve">
+    <value>Người dùng nhận cảnh báo</value>
+  </data>
+  <data name="lbnhandulieucuoi" xml:space="preserve">
+    <value>Nhận dữ liệu cuối</value>
+  </data>
+  <data name="lbnhaplaimatkhaumoi" xml:space="preserve">
+    <value>Nhập lại mật khẩu mới</value>
+  </data>
+  <data name="lbnhapnhanhlaixe" xml:space="preserve">
+    <value>Nhập nhanh lái xe</value>
+  </data>
+  <data name="lbnhapnhanhthongtinsim" xml:space="preserve">
+    <value>Nhập nhanh thông tin sim</value>
+  </data>
+  <data name="lbnhapnhieuxe01" xml:space="preserve">
+    <value>(Bạn có thể nhập nhiều xe, mỗi xe cách nhau dấu phẩy)</value>
+  </data>
+  <data name="lbnhapthongtindangkiem" xml:space="preserve">
+    <value>Nhập thông tin đăng kiểm</value>
+  </data>
+  <data name="lbnhapthongtinsim" xml:space="preserve">
+    <value>Nhập thông tin sim</value>
+  </data>
+  <data name="lbnhienlieu" xml:space="preserve">
+    <value>Nhiên liệu</value>
+  </data>
+  <data name="lbnoicap" xml:space="preserve">
+    <value>Nơi cấp</value>
+  </data>
+  <data name="lbnoidunggopy" xml:space="preserve">
+    <value>Nội dung góy ý (*)</value>
+  </data>
+  <data name="lbphanhoi" xml:space="preserve">
+    <value>Phản hồi</value>
+  </data>
+  <data name="lbphanquyennhomxe" xml:space="preserve">
+    <value>Phân quyền nhóm xe</value>
+  </data>
+  <data name="lbquangduong" xml:space="preserve">
+    <value>Quãng đường</value>
+  </data>
+  <data name="lbquanlyxe" xml:space="preserve">
+    <value>Quản lý xe</value>
+  </data>
+  <data name="lbquantri" xml:space="preserve">
+    <value>Quản trị</value>
+  </data>
+  <data name="lbquantricanhbao" xml:space="preserve">
+    <value>Quản trị cảnh báo</value>
+  </data>
+  <data name="lbquantridangkiem" xml:space="preserve">
+    <value>Quản trị đăng kiểm</value>
+  </data>
+  <data name="lbquantrihethong" xml:space="preserve">
+    <value>Quản trị hệ thống</value>
+  </data>
+  <data name="lbquantrinhom" xml:space="preserve">
+    <value>Quản trị nhóm</value>
+  </data>
+  <data name="lbquantrisim" xml:space="preserve">
+    <value>Quản trị sim</value>
+  </data>
+  <data name="lbquantrithongbao" xml:space="preserve">
+    <value>Quản trị thông báo</value>
+  </data>
+  <data name="lbquantrixe" xml:space="preserve">
+    <value>Quản trị xe</value>
+  </data>
+  <data name="lbquatocdogioihan" xml:space="preserve">
+    <value>Quá tốc độ giới hạn</value>
+  </data>
+  <data name="lbsim" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="lbsodienthoai" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="lbsoluongdau" xml:space="preserve">
+    <value>Số lượng dầu</value>
+  </data>
+  <data name="lbstt" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="lbtailaitrang" xml:space="preserve">
+    <value>Tải lại trang</value>
+  </data>
+  <data name="lbtaixe" xml:space="preserve">
+    <value>Tài xế</value>
+  </data>
+  <data name="lbtaonguoidung" xml:space="preserve">
+    <value>Tạo người dùng</value>
+  </data>
+  <data name="lbtaonhanhnguoidung" xml:space="preserve">
+    <value>Tạo nhanh người dùng</value>
+  </data>
+  <data name="lbtat" xml:space="preserve">
+    <value>Tắt</value>
+  </data>
+  <data name="lbtatca" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="lbtatkhoadien" xml:space="preserve">
+    <value>Tắt khoá điện</value>
+  </data>
+  <data name="lbtatmay" xml:space="preserve">
+    <value>Tắt máy</value>
+  </data>
+  <data name="lbtendangnhap" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="lbtenlaixe" xml:space="preserve">
+    <value>Tên lái xe</value>
+  </data>
+  <data name="lbtentaikhoan" xml:space="preserve">
+    <value>Tên tài khoản</value>
+  </data>
+  <data name="lbtenthietbi" xml:space="preserve">
+    <value>Tên thiết bị</value>
+  </data>
+  <data name="lbthanhtoan" xml:space="preserve">
+    <value>Thanh toán</value>
+  </data>
+  <data name="lbthanhtoantructieptai" xml:space="preserve">
+    <value>Thanh toán trực tiếp tại</value>
+  </data>
+  <data name="lbthaydoimatkhau" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="lbthemlaixe" xml:space="preserve">
+    <value>Thêm lái xe</value>
+  </data>
+  <data name="lbthoigian" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="lbthoigianlai" xml:space="preserve">
+    <value>Thời gian lái</value>
+  </data>
+  <data name="lbthoigianlaixelientuc" xml:space="preserve">
+    <value>Thời gian lái xe liên tục</value>
+  </data>
+  <data name="lbthoigianmo" xml:space="preserve">
+    <value>Thời gian mở</value>
+  </data>
+  <data name="lbthoigianngunghoatdong" xml:space="preserve">
+    <value>Thời gian ngừng hoạt động</value>
+  </data>
+  <data name="lbthoigiantat" xml:space="preserve">
+    <value>Thời gian tắt</value>
+  </data>
+  <data name="lbthongbao" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="lbthongtin" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="lbthongtincongty" xml:space="preserve">
+    <value>Thông tin công ty</value>
+  </data>
+  <data name="lbthongtinnguoidung" xml:space="preserve">
+    <value>THÔNG TIN NGƯỜI DÙNG</value>
+  </data>
+  <data name="lbthongtintaikhoan" xml:space="preserve">
+    <value>Thông tin tài khoản</value>
+  </data>
+  <data name="lbthongtinthietbi" xml:space="preserve">
+    <value>Thông tin thiết bị</value>
+  </data>
+  <data name="lbthongtinthietbi_content" xml:space="preserve">
+    <value>THÔNG TIN THIẾT BỊ</value>
+  </data>
+  <data name="lbtienich" xml:space="preserve">
+    <value>Tiện ích</value>
+  </data>
+  <data name="lbtimkiem" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="lbtoado" xml:space="preserve">
+    <value>Toạ độ</value>
+  </data>
+  <data name="lbtoadobatdau" xml:space="preserve">
+    <value>Toạ độ bắt đầu</value>
+  </data>
+  <data name="lbtoadoketthuc" xml:space="preserve">
+    <value>Toạ độ kết thúc</value>
+  </data>
+  <data name="lbtocdo" xml:space="preserve">
+    <value>Tốc độ</value>
+  </data>
+  <data name="lbtocdocuaxe" xml:space="preserve">
+    <value>Tốc độ của xe</value>
+  </data>
+  <data name="lbtocdotoida" xml:space="preserve">
+    <value>Tốc độ tối đa</value>
+  </data>
+  <data name="lbtocdotrungbinh" xml:space="preserve">
+    <value>Tốc độ trung bình</value>
+  </data>
+  <data name="lbtongkm" xml:space="preserve">
+    <value>Tổng km</value>
+  </data>
+  <data name="lbtongsoxe" xml:space="preserve">
+    <value>Tổng số xe</value>
+  </data>
+  <data name="lbtrangchu" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="lbtrangthai" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="lbtrangthaigps" xml:space="preserve">
+    <value>Trạng thái GPS.</value>
+  </data>
+  <data name="lbtrusochinh" xml:space="preserve">
+    <value>Trụ sở chính</value>
+  </data>
+  <data name="lbtu" xml:space="preserve">
+    <value>Từ</value>
+  </data>
+  <data name="lbtuluc" xml:space="preserve">
+    <value>Từ lúc</value>
+  </data>
+  <data name="lbtungay" xml:space="preserve">
+    <value>Từ ngày</value>
+  </data>
+  <data name="lbvantockmh" xml:space="preserve">
+    <value>Vận tốc (km/h)</value>
+  </data>
+  <data name="lbvantoctoida" xml:space="preserve">
+    <value>Vận tốc tối đa</value>
+  </data>
+  <data name="lbvantoctrungbinh" xml:space="preserve">
+    <value>Vận tốc trung bình</value>
+  </data>
+  <data name="lbvitri" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="lbxedungdonomay" xml:space="preserve">
+    <value>Xe dừng đỗ nổ máy hoặc xe chạy với vận tốc bình thường</value>
+  </data>
+  <data name="lbxedungdotatmay" xml:space="preserve">
+    <value>Xe dừng đỗ tắt máy</value>
+  </data>
+  <data name="lbxem" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="lbxemlailotrinh" xml:space="preserve">
+    <value>Xem lại lộ trình</value>
+  </data>
+  <data name="lbyeucaucungcapdulieu" xml:space="preserve">
+    <value>Yêu cầu cung cấp dữ liệu TCĐBVN</value>
+  </data>
+  <data name="lbynghiabieutuongxe" xml:space="preserve">
+    <value>Ý nghĩa biểu tượng xe</value>
+  </data>
+  <data name="tbbellone01" xml:space="preserve">
+    <value>Trường hợp quá tải nếu không truy cập được vào website khanhhoi.vn. 
+Quý khách vui lòng truy cập với tên miền sau khanhhoi.com.vn. 
+Nếu cần sự hỗ trợ, Quý khách vui lòng liên hệ qua tổng đài</value>
+  </data>
+  <data name="tbbellone02" xml:space="preserve">
+    <value>Xin trân trọng thông báo đến quý khách hàng một số hình thức thanh toán dịch vụ</value>
+  </data>
+  <data name="tbcapnhatthanhcong" xml:space="preserve">
+    <value>Cập nhật thành công.</value>
+  </data>
+  <data name="tbcapnhatthatbai" xml:space="preserve">
+    <value>Cập nhật thất bại.</value>
+  </data>
+  <data name="tbchuacodulieu" xml:space="preserve">
+    <value>Chưa có dữ liệu.</value>
+  </data>
+  <data name="tbdangnhapthatbai" xml:space="preserve">
+    <value>Đăng nhập thất bại hoặc chưa được cấp quyền</value>
+  </data>
+  <data name="tbemailkhonghople" xml:space="preserve">
+    <value>Email không hợp lệ. Vui lòng kiểm tra theo mẫu: abc@gmail.com hoặc test123@abc.xyz</value>
+  </data>
+  <data name="tbgopythanhcong" xml:space="preserve">
+    <value>Gửi góp ý thành công.</value>
+  </data>
+  <data name="tbgopythatbai" xml:space="preserve">
+    <value>Gửi góp ý thất bại.</value>
+  </data>
+  <data name="tbhetphienlamviec" xml:space="preserve">
+    <value>Hết phiên làm việc</value>
+  </data>
+  <data name="tbkhongketnoiduocdulieu" xml:space="preserve">
+    <value>Không kết nối được dữ liệu.</value>
+  </data>
+  <data name="tbmatkhaumoikhongtrung" xml:space="preserve">
+    <value>Mật khẩu mới không trùng khớp.</value>
+  </data>
+  <data name="tbmuathietbi" xml:space="preserve">
+    <value>Mua thiết bị giám sát hành trình quý khách hàng vui lòng liên hệ tổng đài:</value>
+  </data>
+  <data name="tbnhapdayduthongtin" xml:space="preserve">
+    <value>Vui lòng nhập đầy đủ thông tin.</value>
+  </data>
+  <data name="tbnhaplaimatkhaumoi" xml:space="preserve">
+    <value>Vui lòng nhập lại mật khẩu mới.</value>
+  </data>
+  <data name="tbnhapmatkhaucu" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu cũ.</value>
+  </data>
+  <data name="tbnhapmatkhaumoi" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu mới.</value>
+  </data>
+  <data name="tbsaimatkhaucu" xml:space="preserve">
+    <value>Sai mật khẩu cũ.</value>
+  </data>
+  <data name="tbsodienthoaikhonghople" xml:space="preserve">
+    <value>Số điện thoại không hợp lệ.</value>
+  </data>
+  <data name="tbthaydoimatkhauthanhcong" xml:space="preserve">
+    <value>Thay đổi mật khẩu thành công.</value>
+  </data>
+  <data name="tbthaydoithongtinthanhcong" xml:space="preserve">
+    <value>Thay đổi thông tin thành công.</value>
+  </data>
+  <data name="tbvuilongnhapmatkhau" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu</value>
+  </data>
+  <data name="tbvuilongnhaptendangnhap" xml:space="preserve">
+    <value>Vui lòng nhập tên đăng nhập</value>
+  </data>
+  <data name="lbbaocaotonghopkmxehoatdong_content" xml:space="preserve">
+    <value>BÁO CÁO TỔNG HỢP KM XE HOẠT ĐỘNG</value>
+  </data>
+  <data name="lbchuacogps" xml:space="preserve">
+    <value>chưa có GPS</value>
+  </data>
+  <data name="lbchuacothongtinlaixe" xml:space="preserve">
+    <value>Chưa có thông tin lái xe</value>
+  </data>
+  <data name="lbcuamo" xml:space="preserve">
+    <value>cửa mở</value>
+  </data>
+  <data name="lbdangnhap" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="lbdau" xml:space="preserve">
+    <value>Đậu</value>
+  </data>
+  <data name="lbdung" xml:space="preserve">
+    <value>Dừng</value>
+  </data>
+  <data name="lbmatllvachuacogps" xml:space="preserve">
+    <value>mất liên lạc và chưa có GPS</value>
+  </data>
+  <data name="lbmatll_" xml:space="preserve">
+    <value>mất liên lạc</value>
+  </data>
+  <data name="lbnhapvaoxem" xml:space="preserve">
+    <value>Nhấp vào xem</value>
+  </data>
+  <data name="lbnoidung" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="lbquatocdo" xml:space="preserve">
+    <value>quá tốc độ</value>
+  </data>
+  <data name="lbthoigianbatdau" xml:space="preserve">
+    <value>Thời gian bắt đầu</value>
+  </data>
+  <data name="lbthoigianketthuc" xml:space="preserve">
+    <value>Thời gian kết thúc</value>
+  </data>
+  <data name="lbcamera" xml:space="preserve">
+    <value>Camera hành trình</value>
+  </data>
+  <data name="lbcanhbaongugat" xml:space="preserve">
+    <value>Cảnh báo ngủ gật</value>
+  </data>
+  <data name="lbchude" xml:space="preserve">
+    <value>Chủ đề</value>
+  </data>
+  <data name="lbhinhthuc1" xml:space="preserve">
+    <value>Hình thức 1</value>
+  </data>
+  <data name="lbhinhthuc2" xml:space="preserve">
+    <value>Hình thức 2</value>
+  </data>
+  <data name="lbluu" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="lbtrusovanphong" xml:space="preserve">
+    <value>Trụ sở chính văn phòng</value>
+  </data>
+  <data name="lbxemlotrinh" xml:space="preserve">
+    <value>Xem lộ trình</value>
+  </data>
+  <data name="tbbellone01a" xml:space="preserve">
+    <value>Trường hợp quá tải nếu không truy cập được vào website</value>
+  </data>
+  <data name="tbbellone01b" xml:space="preserve">
+    <value>Quý khách vui lòng truy cập với tên miền sau</value>
+  </data>
+  <data name="tbbellone01c" xml:space="preserve">
+    <value>Nếu cần sự hỗ trợ, Quý khách vui lòng liên hệ qua tổng đài</value>
+  </data>
+  <data name="tbbellone021" xml:space="preserve">
+    <value>Xin trân trọng thông báo đến quý khách hàng một số hình thức thanh toán dịch vụ</value>
+  </data>
+  <data name="lbghichu" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="lbconlai" xml:space="preserve">
+    <value>Còn lại (Ngày)</value>
+  </data>
+  <data name="lbcon" xml:space="preserve">
+    <value>còn</value>
+  </data>
+  <data name="lbgiay" xml:space="preserve">
+    <value>Giây</value>
+  </data>
+  <data name="lbgio" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
+  <data name="lbphut" xml:space="preserve">
+    <value>Phút</value>
+  </data>
+  <data name="lbxedichuyen" xml:space="preserve">
+    <value>Xe di chuyển</value>
+  </data>
+  <data name="lbxedungdo" xml:space="preserve">
+    <value>Xe dừng đỗ</value>
+  </data>
+  <data name="lbxemattinhieu" xml:space="preserve">
+    <value>Xe mất tín hiệu GPS, hết hạn dịch vụ, cảnh báo sự cố, quá tốc độ ...</value>
+  </data>
+  <data name="lbhuongdansudung" xml:space="preserve">
+    <value>Hướng dẫn sử dụng</value>
+  </data>
+  <data name="btntaixuong" xml:space="preserve">
+    <value>Tải xuống</value>
+  </data>
+  <data name="btnxemonline" xml:space="preserve">
+    <value>Xem trực tuyến</value>
+  </data>
+  <data name="tbvuilongchonhinhthucxem" xml:space="preserve">
+    <value>Vui lòng chọn hình thức xem?</value>
+  </data>
+  <data name="btnquaylai" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="lbhinhanh" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="btnhuy" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="btnxacnhan" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="lbdanhsachtaikhoan" xml:space="preserve">
+    <value>Danh sách tài khoản</value>
+  </data>
+  <data name="lbdanhsachthietbi" xml:space="preserve">
+    <value>Danh sách thiết bị</value>
+  </data>
+  <data name="lbdichvuhethan" xml:space="preserve">
+    <value>Dịch vụ hết hạn</value>
+  </data>
+  <data name="lbdoithongtinthietbi" xml:space="preserve">
+    <value>Đổi thông tin thiết bị</value>
+  </data>
+  <data name="lbnguoitao" xml:space="preserve">
+    <value>Người tạo</value>
+  </data>
+  <data name="lbnhomxe" xml:space="preserve">
+    <value>Nhóm xe</value>
+  </data>
+  <data name="lbsua" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="lbtaikhoan" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
+  <data name="lbtaomoithongtinlaixe" xml:space="preserve">
+    <value>Tạo mới thông tin lái xe</value>
+  </data>
+  <data name="lbtenkhachhang" xml:space="preserve">
+    <value>Tên khách hàng</value>
+  </data>
+  <data name="lbthem" xml:space="preserve">
+    <value>Thêm</value>
+  </data>
+  <data name="lbthietbi" xml:space="preserve">
+    <value>Thiết bị</value>
+  </data>
+  <data name="lbthietbivataixe" xml:space="preserve">
+    <value>Thiết bị và Tài xế</value>
+  </data>
+  <data name="lbthongtintaixe" xml:space="preserve">
+    <value>Thông tin tài xế</value>
+  </data>
+  <data name="lbxoa" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="tbbanchacchanmuonxoatk" xml:space="preserve">
+    <value>Bạn chắc chắn muốn xoá tài khoản</value>
+  </data>
+  <data name="tbbankhongcoquyen" xml:space="preserve">
+    <value>Bạn không có quyền thêm, sửa, xoá.</value>
+  </data>
+  <data name="tbchucnangdangtamkhoa" xml:space="preserve">
+    <value>Chức năng đang tạm khóa</value>
+  </data>
+  <data name="tbdanhsachxehethandv" xml:space="preserve">
+    <value>Danh sách thiết bị đã và sắp hết hạn</value>
+  </data>
+  <data name="tbvuilongchondstaikhoan" xml:space="preserve">
+    <value>Vui lòng chọn danh sách tài khoản</value>
+  </data>
+  <data name="lbngay" xml:space="preserve">
+    <value>Ngày</value>
+  </data>
+  <data name="lbngaycap" xml:space="preserve">
+    <value>Ngày cấp</value>
+  </data>
+  <data name="tbxoataixethanhcong" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xoá tài xế</value>
+  </data>
+  <data name="lbdaocua" xml:space="preserve">
+    <value>Đảo cửa</value>
+  </data>
+  <data name="lbdaokhoa" xml:space="preserve">
+    <value>Đảo khóa</value>
+  </data>
+  <data name="lbdnquanly" xml:space="preserve">
+    <value>DN quản lý</value>
+  </data>
+  <data name="lbdungtich" xml:space="preserve">
+    <value>Dung tích</value>
+  </data>
+  <data name="lbdungtichbinhnhienlieu" xml:space="preserve">
+    <value>Dung tích bình nhiên liệu (lít)</value>
+  </data>
+  <data name="lbgiaypheplaixe" xml:space="preserve">
+    <value>Giấy phép lái xe</value>
+  </data>
+  <data name="lbkhongcodulieutttaixe" xml:space="preserve">
+    <value>Không có dữ liệu thông tin tài xế</value>
+  </data>
+  <data name="lbloaivantai" xml:space="preserve">
+    <value>Loại vận tải</value>
+  </data>
+  <data name="lbloaixe" xml:space="preserve">
+    <value>Loại xe</value>
+  </data>
+  <data name="lbmuctieuhaonhienlieu100km" xml:space="preserve">
+    <value>Mức tiêu hao nhiên liệu/100km</value>
+  </data>
+  <data name="lbphienban" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="lbso" xml:space="preserve">
+    <value>Số</value>
+  </data>
+  <data name="lbsocmnd" xml:space="preserve">
+    <value>Số CMND</value>
+  </data>
+  <data name="lbsothung" xml:space="preserve">
+    <value>Số thùng</value>
+  </data>
+  <data name="lbsuathongtinlaixe" xml:space="preserve">
+    <value>Sửa thông tin lái xe</value>
+  </data>
+  <data name="lbsuathongtinthietbi" xml:space="preserve">
+    <value>Sửa thông tin thiết bị</value>
+  </data>
+  <data name="lbtaitrong" xml:space="preserve">
+    <value>Tải trọng</value>
+  </data>
+  <data name="lbtentaixe" xml:space="preserve">
+    <value>Tên tài xế</value>
+  </data>
+  <data name="lbtinh" xml:space="preserve">
+    <value>Tỉnh</value>
+  </data>
+  <data name="tbbankhongcoquyenxemdstk" xml:space="preserve">
+    <value>Bạn không có quyền xem danh sách tài khoản</value>
+  </data>
+  <data name="tbcapnhatthongtinthietbithanhcong" xml:space="preserve">
+    <value>Cập nhật thông tin thiết bị thành công</value>
+  </data>
+  <data name="tbcapnhatthongtinthietbithatbai" xml:space="preserve">
+    <value>Cập nhật thông tin thiết bị thất bại</value>
+  </data>
+  <data name="tbchinhsuathongtinthanhcong" xml:space="preserve">
+    <value>Chỉnh sửa thông tin thành công</value>
+  </data>
+  <data name="tbchinhsuathongtinthatbai" xml:space="preserve">
+    <value>Chỉnh sửa thông tin thất bại</value>
+  </data>
+  <data name="tbketnoidulieuthatbai" xml:space="preserve">
+    <value>Kết nối dữ liệu thất bại</value>
+  </data>
+  <data name="tbkhongcodulieudstk" xml:space="preserve">
+    <value>Không có dữ liệu danh sách tài khoản</value>
+  </data>
+  <data name="tbkhongcodulieuthongtintk" xml:space="preserve">
+    <value>Không có dữ liệu thông tin tài khoản</value>
+  </data>
+  <data name="tbsuatttaixethanhcong" xml:space="preserve">
+    <value>Sửa thông tin tài xế thành công</value>
+  </data>
+  <data name="tbsuatttaixethatbai" xml:space="preserve">
+    <value>Sửa thông tin tài xế thất bại</value>
+  </data>
+  <data name="tbtaikhoandacovuilongchontkkhac" xml:space="preserve">
+    <value>Tài khoản đã có. Vui lòng chọn tên khác</value>
+  </data>
+  <data name="tbthemtaikhoanthanhcong" xml:space="preserve">
+    <value>Thêm tai khoản thành công</value>
+  </data>
+  <data name="tbthemtaikhoanthatbai" xml:space="preserve">
+    <value>Thêm tài khoản thất bại</value>
+  </data>
+  <data name="tbthemtaixethanhcong" xml:space="preserve">
+    <value>Thêm tài xế thành công</value>
+  </data>
+  <data name="tbthemtaixethatbai" xml:space="preserve">
+    <value>Thêm tài xế thất bại</value>
+  </data>
+  <data name="tbvuilongchondsxe" xml:space="preserve">
+    <value>Vui lòng chọn danh sách xe</value>
+  </data>
+  <data name="tbvuilongchontaixedexoa" xml:space="preserve">
+    <value>Vui lòng chọn tài xế để xoá</value>
+  </data>
+  <data name="tbvuilongchontaixesuathongtin" xml:space="preserve">
+    <value>Vui lòng chọn tài xế để sửa thông tin</value>
+  </data>
+  <data name="tbvuilongchonxedethemtaixe" xml:space="preserve">
+    <value>Vui lòng chọn xe (thiết bị) để thêm tài xế</value>
+  </data>
+  <data name="tbvuilongnhapgplx" xml:space="preserve">
+    <value>Vui lòng nhập số giấy phép lái xe</value>
+  </data>
+  <data name="tbvuilongnhapsodienthoai" xml:space="preserve">
+    <value>Vui lòng nhập số điện thoại</value>
+  </data>
+  <data name="tbvuilongnhaptentaixe" xml:space="preserve">
+    <value>Vui lòng nhập tên tài xế</value>
+  </data>
+  <data name="tbxoataixethatbai" xml:space="preserve">
+    <value>Xóa tài xế thất bại</value>
+  </data>
+  <data name="tbthanhcong" xml:space="preserve">
+    <value>thành công</value>
+  </data>
+  <data name="tbxoataikhoan" xml:space="preserve">
+    <value>Xoá tài khoản</value>
+  </data>
+  <data name="lbdem" xml:space="preserve">
+    <value>Đêm</value>
+  </data>
+  <data name="lbmacdinh" xml:space="preserve">
+    <value>Mặc định</value>
+  </data>
+  <data name="lbvetinh" xml:space="preserve">
+    <value>Vệ tinh</value>
+  </data>
+</root>

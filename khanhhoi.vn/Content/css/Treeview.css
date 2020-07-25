@@ -1,0 +1,89 @@
+﻿/* MENU-LEFT
+-------------------------- */
+/* layout */
+#left div.nav {
+    margin-bottom: 2px;
+    font-size: 12px; /* to change font-size, please change instead .lbl */
+}
+#left div.nav ul,
+#left div.nav ul li {
+    list-style: none!important;
+    list-style-type: none!important;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+/*#left div.nav ul {
+    padding-left: 0;
+    width: auto;
+}*/
+#left div.nav ul.children {
+    padding-left: 5px;
+    width: auto;
+}
+#left div.nav ul.children li{
+    margin-left: 0px;
+}
+#left div.nav li a:hover {
+    text-decoration: none;
+}
+
+#left div.nav li a:hover .lbl {
+    color: #999!important;
+}
+
+#left div.nav li.current>a .lbl {
+    background-color: #337ab7;
+    color: #fff!important;
+}
+
+/* parent item */
+/*#left ul.nav li.parent a {
+    padding: 0px;
+    color: #ccc;
+}*/
+#left div.nav>li.parent>a {
+    border: solid 1px #999;
+    text-transform: uppercase;
+}    
+/* link tag (a)*/
+#left div.nav li.parent ul li a {
+    color: #222;
+    border: none;
+    display:block;
+    padding-left: 5px;    
+}
+
+#left div.nav li.parent ul li a:hover {
+    background-color: #fff;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+    box-shadow:none;  
+}
+
+/* sign for parent item */
+#left div.nav li .sign {
+    display: inline-block;
+    width: 25px;
+    padding: 5px 8px;
+    background-color: transparent;
+}
+    #left div.nav li.parent > span.lbl > i.sign {
+        margin-left: 0px;
+        background-color: #FFC107;
+    }
+
+/* label */
+#left div.nav li .lbl {
+    padding: 5px 10px;
+    display: inline-block;
+}
+#left div.nav li.current>a>.lbl {
+    color: #fff;
+}
+#left div.nav  li a .lbl{
+    font-size: 12px;
+}
+.span3{
+    height: 300px;
+    overflow-y: auto;
+}

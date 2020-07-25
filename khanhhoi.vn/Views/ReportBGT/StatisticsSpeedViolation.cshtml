@@ -1,0 +1,449 @@
+﻿
+@{
+    ViewBag.Title = "StatisticsSpeedViolation";
+    Layout = "~/Views/Share/_Layout_ReportBGT.cshtml";
+    /*----- THỐNG KÊ VI PHẠM VỀ TỐC ĐỘ THEO ĐƠN VỊ VẬN TẢI ---------*/
+}
+
+<div id="content">
+    <div id="signupbox" class="mainbox col-md-12 col-sm-8">
+        <div class="panel panel-info">
+            <button class="btn-info btn-cus pull-left" id="sidebarCollapse"><i class="fa fa-align-left"></i></button>
+            <div class="panel-heading">
+                <div class="panel-title text-center"> THỐNG KÊ VI PHẠM VỀ TỐC ĐỘ THEO ĐƠN VỊ VẬN TẢI</div>
+            </div>
+            <div class="panel-body">
+                <form method="post" action=".">
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Tên Sở Giao thông vận tải</label>
+                        <div class="col-md-8 ">
+                            <input class="form-control m-b-5" maxlength="30" name="username" type="text" value="Thành Phố Hà Nội" disabled />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4">Đơn vị kinh doanh vận tải</label>
+                        <div class="col-md-8">
+                            <input class="form-control m-b-5" maxlength="30" name="username" type="text" value="Công ty TNHH Viễn Thông Khánh Hội" disabled />
+                        </div>
+                    </div>
+                    <div id="div_id_password1" class="form-group required">
+                        <label for="id_password1" class="control-label col-md-4  requiredField">Chọn ngày</label>
+                        <div class="controls col-md-8 ">
+                            <div class="input-group date m-b-5">
+                                <input class="form-control" type="text" name="datefilter" value="" />
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>&nbsp;
+                                </span>
+                            </div>
+                            <script type="text/javascript">
+                                $(function () {
+
+                                    $('input[name="datefilter"]').daterangepicker({
+                                        autoUpdateInput: true,
+                                        locale: {
+                                            cancelLabel: 'Close'
+                                        }
+                                    });
+
+                                    $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
+                                        $(this).val(picker.startDate.format('DD/MM/YYYY') + ' - ' + picker.endDate.format('DD/MM/YYYY'));
+                                    });
+
+                                    $('input[name="datefilter"]').on('cancel.daterangepicker', function (ev, picker) {
+                                        $(this).val('');
+                                    });
+
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4"> Biển số xe <span class="text-danger">*</span></label>
+                        <div class="col-md-6">
+                            <div class="input-group m-b-5">
+                                <input class="form-control" type="text" value="" placeholder="Search" name="q">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Select <span class="caret"></span></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox" />&nbsp;Tất cả</a></li>
+                                        <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox" />&nbsp;29C84529</a></li>
+                                        <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox" />&nbsp;29C84561</a></li>
+                                        <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox" />&nbsp;29H13747</a></li>
+                                        <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox" />&nbsp;29C84566</a></li>
+                                        <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox" />&nbsp;29C84562</a></li>
+                                    </ul>
+                                    <script>
+                                var options = [];
+                                $('.dropdown-menu a').on('click', function (event) {
+
+                                    var $target = $(event.currentTarget),
+                                        val = $target.attr('data-value'),
+                                        $inp = $target.find('input'),
+                                        idx;
+
+                                    if ((idx = options.indexOf(val)) > -1) {
+                                        options.splice(idx, 1);
+                                        setTimeout(function () { $inp.prop('checked', false) }, 0);
+                                    } else {
+                                        options.push(val);
+                                        setTimeout(function () { $inp.prop('checked', true) }, 0);
+                                    }
+
+                                    $(event.target).blur();
+
+                                    console.log(options);
+                                    return false;
+                                });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 "></div>
+                        <div class="col-md-8 ">
+                            <input type="submit" name="Signup" value="Tìm kiếm" class="btn btn-primary btn btn-info" />
+                        </div>
+                    </div>
+                </form>
+                <div style="float:right; position: relative;">
+                    <a href="#" title="In"><img src="~/images/icon/Print-icon.png" alt="In" /></a>
+                    <a href="#" title="Xuất Excel"><img src="~/images/icon/Excel-icon.png" alt="Xuất Excel" /></a>
+                    <a href="#" title="Xuất PDF"><img src="~/images/icon/Adobe-PDF-Document-icon.png" alt="Xuất PDF" /></a>
+                </div>
+
+            </div>
+            <div class="p-10">
+                <table class="table table-bordered table-hover text-center">
+                    <tbody>
+                        <tr>
+                            <td class="headerAlignCenter" rowspan="2">STT</td>
+                            <td class="headerAlignCenter" rowspan="2">Biển kiểm soát</td>
+                            <td class="headerAlignCenter" rowspan="2">Loại hình hoạt động</td>
+                            <td class="headerAlignCenter" colspan="6">Số lần vi phạm tốc độ</td>
+                            <td class="headerAlignCenter" colspan="3">Quãng đường</td>
+                            <td class="headerAlignCenter" colspan="3">Thời gian</td>
+                            <td class="headerAlignCenter" rowspan="2">Ghi chú</td>
+                        </tr>
+                        <tr>
+                            <th class="alignCenter" scope="col">Từ 5 km/h đến dưới 10 km/h</th>
+                            <th class="alignCenter" scope="col">Từ 10 km/h đến dưới 20 km/h</th>
+                            <th class="alignCenter" scope="col">Từ 20 km/h đến 35 km/h</th>
+                            <th class="alignCenter" scope="col">Trên 35 km/h</th>
+                            <th class="alignCenter" scope="col">Tổng cộng</th>
+                            <th class="alignCenter" scope="col">Số lần vi phạm /1000 km xe chạy</th>
+                            <th class="alignCenter" scope="col">Km vi phạm</th>
+                            <th class="alignCenter" scope="col">Tổng km xe chạy</th>
+                            <th class="alignCenter" scope="col">Tỉ lệ %</th>
+                            <th class="alignCenter" scope="col">Thời gian vi phạm</th>
+                            <th class="alignCenter" scope="col">Tổng thời gian xe chạy</th>
+                            <th class="alignCenter" scope="col">Tỉ lệ %</th>
+                        </tr>
+                        <tr>
+                            <td class="alignCenter" align="center" valign="middle">
+                                1
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                29C86659
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                Vận tải hàng hóa bằng container
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0    
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                122,59
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                170
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alignCenter" align="center" valign="middle">
+                               2
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                29C86659
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                Vận tải hàng hóa bằng container
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                122,59
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                170
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alignCenter" align="center" valign="middle">
+                                3
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                29C86659
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                Vận tải hàng hóa bằng container
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                122,59
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                170
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alignCenter" align="center" valign="middle">
+                                4
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                29C86659
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                Vận tải hàng hóa bằng container
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                122,59
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                170
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alignCenter" align="center" valign="middle">
+                                5
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                29C86659
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                Vận tải hàng hóa bằng container
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                122,59
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                170
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="alignCenter" align="center" valign="middle">
+                                6
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                29C86659
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                Vận tải hàng hóa bằng container
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                122,59
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                170
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                            <td class="alignCenter" align="center" valign="middle">
+                                0
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

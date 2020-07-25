@@ -1,0 +1,428 @@
+﻿@{
+
+    Layout = null;
+    String result = (String)Session["statusLogin"] != null ? (String)Session["statusLogin"] : "";
+    Session["statusLogin"] = null;
+    List<khanhhoi.vn.Models.ModelLanguage> listLang = ViewBag.listLang;
+    // string a = "";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trang theo dõi thiêt bị định vị Viễn Thông Khánh Hội</title>
+    <link rel="icon" type="image/x-icon" href="/images/Logo.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/semantic.min.css" rel="stylesheet" />
+    <link href="~/Content/css/popup.css" rel="stylesheet" />
+    <link href="~/Content/css/tab.css" rel="stylesheet" />
+    <link href="~/Content/css/flag.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/semantic.min.js"></script>
+    <link href="~/Content/css/Bellnoti.css" rel="stylesheet" />
+    @* @* login_bk *@ *@
+</head>
+<style type="text/css">
+    body > .grid {
+        height: 100%;
+    }
+
+    .column {
+        max-width: 450px;
+    }
+
+    .ui.menu .item img.logo {
+        margin-right: 1.5em;
+    }
+
+    .main.container {
+        margin-top: 7em;
+    }
+
+    .wireframe {
+        margin-top: 2em;
+    }
+
+    .ui.footer.segment {
+        padding: 0.22em;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        @{if (Request.Cookies["userName_log"] != null && Request.Cookies["pass_log"] != null)
+           {@:document.getElementById('username').value = '@Request.Cookies["userName_log"].Value';
+        	@:document.getElementById('password').value = '@Request.Cookies["pass_log"].Value';
+           }
+            if (Request.Cookies["lang"] != null) {}
+        }
+        @{
+            if (result == "0") {
+               @: Lobibox.notify('error', {
+               @: delay: 15000,
+               @:msg: 'Đăng nhập thất bại hoặc chưa được cấp quyền.'
+               @:});
+            }
+         }
+
+    });
+    var countload = 0;
+    function ajaxGetdata(idlang) {
+        //deviceID
+        //debugger;
+       // var idlang = document.getElementById('idlang').value;
+        if (countload == 0) {
+            countload += 1;
+            window.location = "Home/Change?languageFlag=" + idlang;
+        }
+        else {
+            window.location = "Change?languageFlag=" + idlang;
+        }
+
+    };
+    function SubmitForm() {
+        setInterval(function () {
+            document.getElementById("formLogin").submit();
+        }, 3000);
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $('.top.menu .item').tab();
+          $('.ui.form')
+            .form({
+                fields: {
+                    email: {
+                        identifier: 'username',
+                        rules: [
+                          {
+                              type: 'empty',
+                              prompt: 'Vui lòng nhập tên đăng nhập'
+                          },
+                        ]
+                    },
+                    password: {
+                        identifier: 'password',
+                        rules: [
+                          {
+                              type: 'empty',
+                              prompt: 'Vui lòng nhập mật khẩu'
+                          },
+                        ]
+                    }
+                }
+            });
+      });
+
+</script>
+<!--start menu-->
+<div class="ui fixed menu">
+    <div class="ui container">
+        <a href="#" class="header item">
+            <img class="logo" src="~/images/logo/Logokhanhhoi_150dpi.png"> Viễn Thông Khánh Hội
+        </a>
+        <a href="http://khanhhoi.net/" target="_blank" class="item">Trang chủ</a>
+        <div class="ui simple dropdown item">
+            Hộ trợ <i class="dropdown icon"></i>
+            <div class="menu">
+                <a class="item" href="#" id="btnPay">Thanh toán</a>
+                <a class="item" href="#" id="btnSupport">Kỹ thuật</a>
+            </div>
+        </div>
+        <div class="ui simple item">
+            <a href="javascript:ajaxGetdata('vi');"><i class="vn flag inline" data-content="Vietnamese"></i></a>
+            <a href="javascript:ajaxGetdata('en');"><i class="us flag inline" data-content="English"></i></a>
+            <a href="javascript:ajaxGetdata('km');"><i class="kh flag inline" data-content="Cambodia"></i></a>
+        </div>
+        <div class="right menu">
+            <a class="ui containernoti item" id="btnModal">
+                <div class="notification notify show-count" data-count="2">
+                </div>
+            </a>
+        </div>
+        <script>
+            $('#btnModal').click(function () {
+                $('.ui.modal.notifa').modal('show');
+            })
+            $('#btnPay').click(function () {
+                $('.ui.modal.Pay').modal('show');
+            })
+            $('#btnSupport').click(function () {
+                $('.ui.modal.Support').modal('show');
+            })
+        </script>
+    </div>
+</div>
+<!--end menu-->
+<div class="ui middle aligned center aligned grid">
+    <div class="column">
+        <h2 class="ui image header">ĐĂNG NHẬP TÀI KHOẢN</h2>
+        <form action="~/Home/ValidateUser" method="post" id="formLogin" autocomplete="on" class="ui large form">
+            <div class="ui message">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input id="username" name="username" type="email" placeholder="@khanhhoi.vn.Resources.Language.lbtendangnhap">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input id="password" name="password" type="password" placeholder="@khanhhoi.vn.Resources.Language.lbmatkhau">
+                    </div>
+                </div>
+                <div class="ui fluid large teal submit button login-btn" onclick="SubmitForm();">@khanhhoi.vn.Resources.Language.lbdangnhap</div>
+            </div>
+            <div class="ui error message"></div>
+            <div class="field"></div>
+        </form>
+        <script>
+            $('.ui.dropdown').dropdown();
+            $('.inline.flag').popup({
+                inline: true
+            });
+        </script>
+        <div class="ui message">
+            <span>Cài app trên điện thoại của bạn</span>
+            <div class="w-full text-center">
+                <a href="https://itunes.apple.com/us/app/gts-khn/id1317506083?l=vi&amp;ls=1&amp;mt=8" target="_blank" class="login100-social-item bg1">
+                    <img class="img-responsive" src="/images/appstore.png">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.khanhhoi.GTS&amp;hl=en" target="_blank" class="login100-social-item bg2">
+                    <img class="img-responsive" src="/images/googleplay.png">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+        Lưu ý: ứng dụng chạy tốt nhất trên các trình duyệt
+        <a href="http://www.mozilla.com/vi/firefox/" target="_blank" title="Download Firefox">
+            <img width="20" src="/images/icon/firefox.png" style="border: none; vertical-align:middle;" alt="Firefox Browser">
+        </a> Firefox
+        <a href="http://www.google.com/chrome/index.html" target="_blank" title="Download Firefox">
+            <img width="20" src="/images/icon/chrome.png" style="border: none; vertical-align: middle;" alt="Firefox Browser">
+        </a>Chrome
+    </div>
+</div>
+<div class="ui modal notifa small">
+    <div class="header">Thông Báo!</div>
+    <div class="content">
+        <div class="description">
+            <div class="ui feed">
+                <div class="event">
+                    <div class="label">
+                        <img src="/images/icon/Bell.png">
+                    </div>
+                    <div class="content">
+                        <div class="date">
+                            1 ngày trước
+                        </div>
+                        <div>
+                            Mua thiết bị giám sát hành trình quý khách hàng vui lòng liên hệ tổng đài: <b>02862586777</b> hoặc <b>02862569777</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui feed">
+                <div class="event">
+                    <div class="label">
+                        <img src="/images/icon/Bell.png">
+                    </div>
+                    <div class="content">
+                        <div class="date">
+                            3 ngày trước
+                        </div>
+                        <div>
+                            <p>Trường hợp quá tải nếu không truy cập được vào website <a href="http://khanhhoi.vn" target="_blank"><b class="text-danger"><u>www.khanhhoi.vn</u></b></a>. Quý khách vui lòng truy cập với tên miền sau: <a href="http://khanhhoi.com.vn" target="_blank"><b class="text-success"><u>www.khanhhoi.com.vn</u></b></a>. Nếu cần sự hỗ trợ, Quý khách vui lòng liên hệ qua tổng đài <b>02862569777 - 02862586777.</b> Xin cảm ơn!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="ui modal Pay">
+    <div class="image content">
+        <div class="ui medium image" style="align-self:center;">
+            <img src="/images/logo/logo_khn.png">
+        </div>
+        <div class="description">
+            <div class="ui header">Xin trân trọng thông báo đến quý khách hàng một số hình thức thanh toán dịch vụ</div>
+            <div class="ui top attached tabular menu">
+                <a class="item active" data-tab="first">Hình thức 1</a>
+                <a class="item" data-tab="second">Hình thức 2</a>
+            </div>
+            <div class="ui bottom attached tab segment active" data-tab="first">
+                <table class="ui celled table">
+                    <thead>
+                        <tr>
+                            <th>Ngân hàng</th>
+                            <th>Tên tài khoản</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h4 class="ui image header">
+                                    <img src="/images/icon/vietcombank.png" class="ui mini rounded image">
+                                    <div class="content">
+                                        Vietcombank CN Tp. HCM
+                                        <div class="sub header">
+                                            0071003220138
+                                        </div>
+                                    </div>
+                                </h4>
+                            </td>
+                            <td>
+                                Đặng Vũ Nghị
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4 class="ui image header">
+                                    <img src="/images/icon/aribank.png" class="ui mini rounded image">
+                                    <div class="content">
+                                        Agribank Bình Thạnh HCM
+                                        <div class="sub header">
+                                            6380205114300
+                                        </div>
+                                    </div>
+                                </h4>
+                            </td>
+                            <td>
+                                Đặng Vũ Nghị
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4 class="ui image header">
+                                    <img src="/images/icon/sacombank-logo.png" class="ui mini rounded image">
+                                    <div class="content">
+                                        Sacombank Tp. HCM
+                                        <div class="sub header">
+                                            060036580601
+                                        </div>
+                                    </div>
+                                </h4>
+                            </td>
+                            <td>
+                                Đặng Vũ Nghị
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="second">
+                <div class="ui icon message">
+                    <i class="home icon"></i>
+                    <div class="content">
+                        <div class="header">
+                            Thanh toán trực tiếp tại
+                        </div>
+                        <p>184/1 Nguyễn Văn Khối, P.09, Q.Gò Vấp, HCM</p>
+                    </div>
+                </div>
+                <div class="ui icon message">
+                    <i class="phone icon"></i>
+                    <div class="ui mini horizontal divided list">
+                        <div class="item">
+                            <div class="content">
+                                <div class="header">028 625 69 777</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <div class="header">028 625 86 777</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="content">
+                                <div class="header">1900636799</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui cancel button">Đóng</div>
+    </div>
+</div>
+<div class="ui modal Support">
+    <i class="close icon"></i>
+    <div class="header">Hỗ trợ khách hàng</div>
+    <div class="image content">
+        <div class="ui medium image">
+            <img src="/images/support-icon.png">
+        </div>
+        <div class="description">
+            <div class="ui feed">
+                <div class="event">
+                    <div class="label">
+                        <i class="phone square icon"></i>
+                    </div>
+                    <div class="content">
+                        <div class="date">Điện thoại</div>
+                        <div class="summary">
+                            <a>1900636799</a> | <a>02862586777</a> | <a>02862569777</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="label">
+                        <i class="phone square icon"></i>
+                    </div>
+                    <div class="content">
+                        <div class="date">Di động</div>
+                        <div class="summary">
+                            <a>0977082838</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="event">
+                    <div class="label">
+                        <i class="envelope open icon"></i>
+                    </div>
+                    <div class="content">
+                        <div class="date">Mail</div>
+                        <div class="summary">
+                            <a>khncoltd@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="label">
+                        <i class="home icon"></i>
+                    </div>
+                    <div class="content">
+                        <div class="date">Trụ sở chính</div>
+                        <div class="summary">
+                            <a>184/1 Nguyễn Văn Khối, P.09, Q.Gò Vấp, HCM</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="label">
+                        <i class="home icon"></i>
+                    </div>
+                    <div class="content">
+                        <div class="date">Chi nhánh 1</div>
+                        <div class="summary">
+                            <a>Tân Thành, Tam Quan Bắc, Hoài Nhơn, Bình Định</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/popup.js"></script>
+<script src="~/Scripts/modal.js"></script>
+<script src="~/Scripts/tab.js"></script>

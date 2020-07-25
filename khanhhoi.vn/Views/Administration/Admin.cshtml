@@ -1,0 +1,228 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Share/_Layout.cshtml";
+}
+
+<div class="wrapper">
+    <div id="sidebar" class="list-group">
+        <a href="#sub-menu" class="list-group-item active" data-toggle="collapse" data-parent="#main-menu">Quản trị hệ thống <span class="caret pull-right m-t-5"></span></a>
+        <div class="collapse list-group-level1 in" id="sub-menu">
+            <a href="#" class="list-group-item" data-parent="#sub-menu"><img src="~/images/icon/Actions-list-add-user-icon.png" /> Tạo người dùng</a>
+            <a href="#" class="list-group-item" data-parent="#sub-menu"><img src="~/images/icon/Apps-preferences-contact-list-icon.png" /> Danh sách người dùng</a>
+            <a href="#" class="list-group-item" data-parent="#sub-menu"><img src="~/images/icon/Info-icon.png" /> Thông tin công ty</a>
+            <a href="#" class="list-group-item" data-parent="#sub-menu"><img src="~/images/icon/Actions-user-group-properties-icon.png" /> Tạo nhanh người dùng</a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/User-Files-icon.png" /> Yêu cầu cung cấp dữ liệu TCĐBVN </a>
+        </div>
+        <a href="#sub-sub-menu" class="list-group-item active" data-toggle="collapse" data-parent="#sub-menu">Quản trị xe<span class="caret pull-right m-t-5"></span></a>
+        <div class="collapse list-group-level2 in" id="sub-sub-menu">
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/listcar.png" /> Danh sách xe</a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/User-Group-icon.png" /> Quản trị nhóm</a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/Apps-preferences-desktop-user-password-icon.png" /> Phân quyền nhóm xe</a>
+        </div>
+        <a href="#sub-sub-menu-1" class="list-group-item active" data-toggle="collapse" data-parent="#sub-menu">Quản lý xe <span class="caret pull-right m-t-5"></span></a>
+        <div class="collapse list-group-level2 in" id="sub-sub-menu-1">
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/car-add-icon.png" /> Thêm lái xe </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/Checklist-icon.png" /> Danh sách lái xe </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/document-add-icon.png" /> Nạp thông tin lái xe </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/contacts-icon.png" /> Danh mục thẻ </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/edit-file-icon.png" /> Nhập nhanh lái xe </a>
+        </div>
+        <a href="#sub-sub-menu-2" class="list-group-item active" data-toggle="collapse" data-parent="#sub-menu">Quản trị thông báo <span class="caret pull-right m-t-5"></span></a>
+        <div class="collapse list-group-level2 in" id="sub-sub-menu-2">
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/Notification-Folder-icon.png" /> Danh sách thông báo </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/warning.png" /> Quản trị cảnh báo </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/preferences-system-notifications-icon.png" /> User nhận cảnh báo </a>
+        </div>
+
+        <a href="#sub-sub-menu-4" class="list-group-item active" data-toggle="collapse" data-parent="#sub-menu">Phí dịch vụ <span class="caret pull-right m-t-5"></span></a>
+        <div class="collapse list-group-level2 in" id="sub-sub-menu-4">
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/Blue-Documents-icon.png" /> Hướng dẫn trả phí </a>
+            <a href="#" class="list-group-item" data-parent="#sub-sub-menu"><img src="~/images/icon/Blue-Documents-icon.png" /> Điều khoản dịch vụ </a>
+        </div>
+    </div>
+    @*<div id="content">
+        <div class="col-md-12">
+            <table>
+                <tr>
+                    <td>
+                        <button class="btn-info btn-cus pull-left" id="sidebarCollapse"><i class="fa fa-align-left"></i></button>
+                        <div class="header-car  text-center"><h5 style="font-weight:700;">QUẢN TRỊ HỆ THỐNG</h5></div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Actions-list-add-user-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Tạo người dùng</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Apps-preferences-contact-list-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Danh sách người dùng</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Actions-user-group-properties-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Tạo nhanh người dùng</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Info-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Thông tin công ty</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/User-Files-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Yêu cầu cung cấp dữ liệu TCĐBVN</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="header-car text-center text-danger"><h5 style="font-weight:700;">QUẢN TRỊ XE</h5></div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/listcar.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Danh sách xe</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/User-Group-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Quản trị nhóm</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Apps-preferences-desktop-user-password-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Phân quyền nhóm xe</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="header-car text-center text-danger"><h5 style="font-weight:700;">QUẢN LÝ XE</h5></div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/car-add-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Thêm lái xe</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Checklist-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Danh sách lái xe</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/document-add-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Nạp thông tin lái xe</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/contacts-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Danh mục thẻ</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/edit-file-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Nhập nhanh lái xe</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="header-car text-center text-danger"><h5 style="font-weight:700;">QUẢN TRỊ THÔNG BÁO</h5></div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/Notification-Folder-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Danh sách thông báo</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/warning.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>Quản trị cảnh báo</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 col-xl-4">
+                            <div class="wrap">
+                                <div class="ico-wrap">
+                                    <img src="~/images/icon/preferences-system-notifications-icon.png" class="mbr-iconfont" />
+                                </div>
+                                <div class="text-wrap vcenter">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"><span>User nhận cảnh báo</span></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>*@
+</div>

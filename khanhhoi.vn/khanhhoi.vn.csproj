@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA3F7A66-25F4-4D87-9C1B-5D147A8FA639}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>khanhhoi.vn</RootNamespace>
+    <AssemblyName>khanhhoi.vn</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Project_KHN\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.VideoConverter">
+      <HintPath>..\..\NReco.VideoConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Zstandard.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Conenction\khndb4Context.cs" />
+    <Compile Include="Conenction\khndb4_backupContext.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportBGTController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\UtilitiesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Models\Ext\FileModel.cs" />
+    <Compile Include="Models\Ext\JourneyModel.cs" />
+    <Compile Include="Models\tbldozy.cs" />
+    <Compile Include="Models\tbluserdevice.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\BaoCaoHanhTrinh.cs" />
+    <Compile Include="Models\BaoCaoHanhTrinh_Detail.cs" />
+    <Compile Include="Models\CMD.cs" />
+    <Compile Include="Models\DataForDriver.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\DeviceFull.cs" />
+    <Compile Include="Models\DeviceInfo.cs" />
+    <Compile Include="Models\DeviceLog.cs" />
+    <Compile Include="Models\DeviceStatus.cs" />
+    <Compile Include="Models\DeviceUser.cs" />
+    <Compile Include="Models\Distance.cs" />
+    <Compile Include="Models\DistaneModel.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\ExceedingSpeed.cs" />
+    <Compile Include="Models\Ext\LoadModel.cs" />
+    <Compile Include="Models\Ext\LotrinhItem.cs" />
+    <Compile Include="Models\Ext\ReportItem.cs" />
+    <Compile Include="Models\Fail.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Fuel.cs" />
+    <Compile Include="Models\General.cs" />
+    <Compile Include="Models\GpsData.cs" />
+    <Compile Include="Models\GPSKML.cs" />
+    <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\Log.cs" />
+    <Compile Include="Models\Marquee.cs" />
+    <Compile Include="Models\ModelLanguage.cs" />
+    <Compile Include="Models\Notify.cs" />
+    <Compile Include="Models\OilInfomation.cs" />
+    <Compile Include="Models\On_Off.cs" />
+    <Compile Include="Models\Open_Close.cs" />
+    <Compile Include="Models\PauseStop.cs" />
+    <Compile Include="Models\Poly.cs" />
+    <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\SimCategory.cs" />
+    <Compile Include="Models\tbladdress.cs" />
+    <Compile Include="Models\tblkeygoogle.cs" />
+    <Compile Include="Models\tempdatesave.cs" />
+    <Compile Include="Models\TimeDriver.cs" />
+    <Compile Include="Models\TypeTransport.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\VantocTunggiay.cs" />
+    <Compile Include="Models\VehicleCategorys.cs" />
+    <Compile Include="Models\VehicleGroups.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Repository_khndb4.cs" />
+    <Compile Include="Repository\Repository_khndb4_backup.cs" />
+    <Compile Include="Resources\Language.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Language.en.Designer.cs">
+      <DependentUpon>Language.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Language.vi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.vi.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Language.km.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.km.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DeviceService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\ReportService.cs" />
+    <Compile Include="Services\Services_khndb4.cs" />
+    <Compile Include="Services\Services_khndb4_backup.cs" />
+    <Compile Include="Services\Services_khndb4_backupT.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\DateTimeExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\assets\images\flags.png" />
+    <Content Include="Content\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\coming-sssoon.css" />
+    <Content Include="Content\css\error404.css" />
+    <Content Include="Content\css\flag.css" />
+    <Content Include="Content\css\flag.min.css" />
+    <Content Include="Content\css\fontawesome.css" />
+    <Content Include="Content\css\fontawesome.min.css" />
+    <Content Include="Content\css\lightgallery.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\modal.css" />
+    <Content Include="Content\css\popup.css" />
+    <Content Include="Content\css\rate.css" />
+    <Content Include="Content\css\responsive\responsive.css" />
+    <Content Include="Content\css\semantic.min.css" />
+    <Content Include="Content\css\daterangepicker.css" />
+    <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\css\sidebar_.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\tab.css" />
+    <Content Include="Content\css\Bellnoti.css" />
+    <Content Include="Content\css\stylemain.css" />
+    <Content Include="Content\css\themes\default\assets\fonts\brand-icons.svg" />
+    <Content Include="Content\css\themes\default\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\css\themes\default\assets\fonts\icons.svg" />
+    <Content Include="Content\css\themes\default\assets\fonts\outline-icons.svg" />
+    <Content Include="Content\css\Toast.css" />
+    <Content Include="Content\css\Treeview.css" />
+    <Content Include="Content\css\video-js.css" />
+    <Content Include="Content\css\Video.css" />
+    <Content Include="Content\fonts\lg.svg" />
+    <Content Include="Content\jquery.spin.css" />
+    <Content Include="Content\login\documentation.css" />
+    <Content Include="Content\login\LobiBox.min.css" />
+    <Content Include="Content\login\style.css" />
+    <Content Include="Content\login\tb.css" />
+    <Content Include="Content\scss\test.css">
+      <DependentUpon>test.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\test.min.css">
+      <DependentUpon>test.css</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="File\~%24SD-Website.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\appstore.png" />
+    <Content Include="images\arrow-green.svg" />
+    <Content Include="images\arrow-red.svg" />
+    <Content Include="images\bg\bg_01.svg" />
+    <Content Include="images\bg\bg_02.svg" />
+    <Content Include="images\bg\bg_03.svg" />
+    <Content Include="images\bg\bg_header.png" />
+    <Content Include="images\bg\logo_gps.png" />
+    <Content Include="images\bg\pk-pro-cover.jpg" />
+    <Content Include="images\clipboard.svg" />
+    <Content Include="images\clusters.svg" />
+    <Content Include="images\connection-gsm-gps.svg" />
+    <Content Include="images\engine-off.svg" />
+    <Content Include="images\engine-on.svg" />
+    <Content Include="images\flag\cambodia.svg" />
+    <Content Include="images\flag\united-kingdom.svg" />
+    <Content Include="images\flag\vietnam.svg" />
+    <Content Include="images\gas-station.svg" />
+    <Content Include="images\googleplay.png" />
+    <Content Include="images\gps_02.jpg" />
+    <Content Include="images\icon\24-hours.png" />
+    <Content Include="images\icon\Actions-list-add-user-icon.png" />
+    <Content Include="images\icon\Actions-user-group-properties-icon.png" />
+    <Content Include="images\icon\Admin-icon.png" />
+    <Content Include="images\icon\Adobe-PDF-Document-icon.png" />
+    <Content Include="images\icon\air-conditioning.png" />
+    <Content Include="images\icon\Alarm-clock-icon.png" />
+    <Content Include="images\icon\alert1.svg" />
+    <Content Include="images\icon\App-lists-icon.png" />
+    <Content Include="images\icon\Application-Window-icon.png" />
+    <Content Include="images\icon\Apps-Help-Info-icon.png" />
+    <Content Include="images\icon\Apps-preferences-contact-list-icon.png" />
+    <Content Include="images\icon\Apps-preferences-desktop-user-password-icon24.png" />
+    <Content Include="images\icon\Apps-preferences-desktop-user-password-icon.png" />
+    <Content Include="images\icon\BackHome.png" />
+    <Content Include="images\icon\bar-chart.png" />
+    <Content Include="images\icon\bell-icon.png" />
+    <Content Include="images\icon\Blue-Documents-icon.png" />
+    <Content Include="images\icon\bullet_arrow_down.png" />
+    <Content Include="images\icon\business.png" />
+    <Content Include="images\icon\camaro-icon.png" />
+    <Content Include="images\icon\car-add-icon.png" />
+    <Content Include="images\icon\car-icon.png" />
+    <Content Include="images\icon\Car-Right-Red-icon.png" />
+    <Content Include="images\icon\car.png" />
+    <Content Include="images\icon\celander.svg" />
+    <Content Include="images\icon\chart-icon.png" />
+    <Content Include="images\icon\Checklist-icon.png" />
+    <Content Include="images\icon\clipboard.png" />
+    <Content Include="images\icon\comment_icon.png" />
+    <Content Include="images\icon\compass.svg" />
+    <Content Include="images\icon\contacts-icon.png" />
+    <Content Include="images\icon\create-icon.svg" />
+    <Content Include="images\icon\Customer-service-icon.png" />
+    <Content Include="images\icon\Dashboard-icon.png" />
+    <Content Include="images\icon\database-settings-icon.png" />
+    <Content Include="images\icon\delete-icon.png" />
+    <Content Include="images\icon\delete-icon2.svg" />
+    <Content Include="images\icon\destination.png" />
+    <Content Include="images\icon\device_exp_icon.png" />
+    <Content Include="images\icon\device_exp_icon.svg" />
+    <Content Include="images\icon\document-add-icon.png" />
+    <Content Include="images\icon\edit-file-icon.png" />
+    <Content Include="images\icon\edit-icon.svg" />
+    <Content Include="images\icon\Excel-icon.png" />
+    <Content Include="images\icon\Flag_En.png" />
+    <Content Include="images\icon\Flag_vn.png" />
+    <Content Include="images\icon\folder-documents-icon.png" />
+    <Content Include="images\icon\folder-icon.png" />
+    <Content Include="images\icon\gas-pump.png" />
+    <Content Include="images\icon\General-icon.png" />
+    <Content Include="images\icon\GoogleEarth01.png" />
+    <Content Include="images\icon\Info-icon.png" />
+    <Content Include="images\icon\kmh.svg" />
+    <Content Include="images\icon\link-icon.png" />
+    <Content Include="images\icon\listcar.png" />
+    <Content Include="images\icon\location.svg" />
+    <Content Include="images\icon\logout-icon.png" />
+    <Content Include="images\icon\machine.svg" />
+    <Content Include="images\icon\map_car.svg" />
+    <Content Include="images\icon\MI-Scare-Report-icon.png" />
+    <Content Include="images\icon\Monitoring-icon.png" />
+    <Content Include="images\icon\more.svg" />
+    <Content Include="images\icon\Notification-Folder-icon.png" />
+    <Content Include="images\icon\park.png" />
+    <Content Include="images\icon\parking.png" />
+    <Content Include="images\icon\parking_red.png" />
+    <Content Include="images\icon\pass.svg" />
+    <Content Include="images\icon\phone_.png" />
+    <Content Include="images\icon\preferences-system-notifications-icon.png" />
+    <Content Include="images\icon\Print-icon.png" />
+    <Content Include="images\icon\refresh-icon.png" />
+    <Content Include="images\icon\report-car.png" />
+    <Content Include="images\icon\report.png" />
+    <Content Include="images\icon\review_icon.gif" />
+    <Content Include="images\icon\route.png" />
+    <Content Include="images\icon\SEO-icon.png" />
+    <Content Include="images\icon\Settings-icon.png" />
+    <Content Include="images\icon\Signal-Receiver-icon.png" />
+    <Content Include="images\icon\Signal-Tower-icon.png" />
+    <Content Include="images\icon\sim-card-icon.png" />
+    <Content Include="images\icon\sim.png" />
+    <Content Include="images\icon\sims.png" />
+    <Content Include="images\icon\statistic_icon.gif" />
+    <Content Include="images\icon\taikhoan_huy_edit.svg" />
+    <Content Include="images\icon\Taxi-Right-Yellow-icon.png" />
+    <Content Include="images\icon\tick.svg" />
+    <Content Include="images\icon\tool-box-preferences-icon.png" />
+    <Content Include="images\icon\track_icon.png" />
+    <Content Include="images\icon\truck-icon.png" />
+    <Content Include="images\icon\User-Files-icon.png" />
+    <Content Include="images\icon\User-Group-icon.png" />
+    <Content Include="images\icon\User.png" />
+    <Content Include="images\icon\warning.png" />
+    <Content Include="images\icon\Window-Enter-icon.png" />
+    <Content Include="images\khn.png" />
+    <Content Include="images\land-bus-1.svg" />
+    <Content Include="images\land-car-1.svg" />
+    <Content Include="images\land-truck.svg" />
+    <Content Include="images\Logo.ico" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo\AD.png" />
+    <Content Include="images\logo\logo.png" />
+    <Content Include="images\logo\Logokhanhhoi_150dpi.png" />
+    <Content Include="images\logo\logo_khn.png" />
+    <Content Include="images\logo\logo_kH_01.png" />
+    <Content Include="images\logo_khn.png" />
+    <Content Include="images\minus.svg" />
+    <Content Include="images\Mui-ten\direction-black.png" />
+    <Content Include="images\Mui-ten\direction-green.png" />
+    <Content Include="images\Mui-ten\direction-red.png" />
+    <Content Include="images\Mui-ten\Mui-ten-den.png" />
+    <Content Include="images\Mui-ten\Mui-ten-den.svg" />
+    <Content Include="images\Mui-ten\Mui-ten-do.png" />
+    <Content Include="images\Mui-ten\Mui-ten-do.svg" />
+    <Content Include="images\Mui-ten\Mui-ten-xanh.png" />
+    <Content Include="images\Mui-ten\Mui-ten-xanh.svg" />
+    <Content Include="images\object-arrow.svg" />
+    <Content Include="images\odometer-for-kilometers-and-speed-control.svg" />
+    <Content Include="images\plus.svg" />
+    <Content Include="images\profits.svg" />
+    <Content Include="images\road.png" />
+    <Content Include="images\route %281%29.svg" />
+    <Content Include="images\route.svg" />
+    <Content Include="images\support-icon.png" />
+    <Content Include="images\switch.svg" />
+    <Content Include="images\tau\tau-den.png" />
+    <Content Include="images\tau\tau-do.png" />
+    <Content Include="images\tau\tau-xanh.png" />
+    <Content Include="images\text.svg" />
+    <Content Include="images\ThapCau\film.png" />
+    <Content Include="images\ThapCau\moto_tai_22.png" />
+    <Content Include="images\ThapCau\tatmo_khoadien_24.png" />
+    <Content Include="images\ThapCau\thapcau02_35.png" />
+    <Content Include="images\ThapCau\thapcau_01_35.png" />
+    <Content Include="images\ThapCau\warning.png" />
+    <Content Include="images\traffic.svg" />
+    <Content Include="images\Xe-con\car-black.png" />
+    <Content Include="images\Xe-con\car-green.png" />
+    <Content Include="images\Xe-con\car-red.png" />
+    <Content Include="images\Xe-con\car-yellow.png" />
+    <Content Include="images\Xe-con\den.svg" />
+    <Content Include="images\Xe-con\do.svg" />
+    <Content Include="images\Xe-con\Hatchback_Blue.png" />
+    <Content Include="images\Xe-con\xanh.svg" />
+    <Content Include="images\Xe-con\xe-con-den.png" />
+    <Content Include="images\Xe-con\xe-con-do.png" />
+    <Content Include="images\Xe-con\xe-con-xanh.png" />
+    <Content Include="images\Xe-du-lich\den.svg" />
+    <Content Include="images\Xe-du-lich\do.svg" />
+    <Content Include="images\Xe-du-lich\muv-black.png" />
+    <Content Include="images\Xe-du-lich\muv-green.png" />
+    <Content Include="images\Xe-du-lich\muv-red.png" />
+    <Content Include="images\Xe-du-lich\xanh.svg" />
+    <Content Include="images\Xe-du-lich\xe-du-lich-den.png" />
+    <Content Include="images\Xe-du-lich\xe-du-lich-den.svg" />
+    <Content Include="images\Xe-du-lich\xe-du-lich-do.png" />
+    <Content Include="images\Xe-du-lich\xe-du-lich-do.svg" />
+    <Content Include="images\Xe-du-lich\xe-du-lich-xanh.png" />
+    <Content Include="images\Xe-du-lich\xe-du-lich-xanh.svg" />
+    <Content Include="images\Xe-khach\bus-black.png" />
+    <Content Include="images\Xe-khach\bus-green.png" />
+    <Content Include="images\Xe-khach\bus-red.png" />
+    <Content Include="images\Xe-khach\bus-yellow.png" />
+    <Content Include="images\Xe-khach\den.svg" />
+    <Content Include="images\Xe-khach\do.svg" />
+    <Content Include="images\Xe-khach\xanh.svg" />
+    <Content Include="images\Xe-may\den.svg" />
+    <Content Include="images\Xe-may\do.svg" />
+    <Content Include="images\Xe-may\Motorcycle_black.png" />
+    <Content Include="images\Xe-may\Motorcycle_green.png" />
+    <Content Include="images\Xe-may\Motorcycle_red.png" />
+    <Content Include="images\Xe-may\Motorcycle_yellow.png" />
+    <Content Include="images\Xe-may\xanh.svg" />
+    <Content Include="images\Xe-tai\den.svg" />
+    <Content Include="images\Xe-tai\do.svg" />
+    <Content Include="images\Xe-tai\truck-black.png" />
+    <Content Include="images\Xe-tai\truck-green.png" />
+    <Content Include="images\Xe-tai\truck-red.png" />
+    <Content Include="images\Xe-tai\xanh.svg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\dataTables.bootstrap.min.css" />
+    <Content Include="Scripts\Datetimepicker\bootstrap-datetimepicker.fr.js" />
+    <Content Include="Scripts\Datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\Datetimepicker\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\Gmap\AnimateMarker_Lotrinh.js" />
+    <Content Include="Scripts\Gmap\gps_LoTrinhOff.js" />
+    <Content Include="Scripts\Gmap\Line_BienGioiBienVN.js" />
+    <Content Include="Scripts\Gmap\markerclusterer.js" />
+    <Content Include="Scripts\Gmap\markerclusterer_compiled.js" />
+    <Content Include="Scripts\Gmap\markerwithlabel.js" />
+    <Content Include="Scripts\Gmap\v3_epoly.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\login.js" />
+    <Content Include="Scripts\particles.min.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\jquery.spin.js" />
+    <Content Include="Scripts\lg-fullscreen.min.js" />
+    <Content Include="Scripts\lg-thumbnail.min.js" />
+    <Content Include="Scripts\lightgallery.min.js" />
+    <Content Include="Scripts\Lotrinh\LotrinhScript.js" />
+    <Content Include="Scripts\Main.js" />
+    <Content Include="Scripts\popup.js" />
+    <Content Include="Scripts\semantic.min.js" />
+    <Content Include="Scripts\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\daterangepicker.min.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\stylemain.js" />
+    <Content Include="Scripts\videojs-ie8.min.js" />
+    <Content Include="Scripts\video.js" />
+    <Content Include="Scripts\tab.js" />
+    <Content Include="Scripts\modal.js" />
+    <Content Include="Scripts\markerwithlabel.js" />
+    <None Include="Views\Share\Error404.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="img\" />
+    <Folder Include="Scripts\particles_js\" />
+    <Folder Include="Scripts\src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Content\css\themes\default\assets\fonts\brand-icons.eot" />
+    <Content Include="Content\css\themes\default\assets\fonts\brand-icons.ttf" />
+    <Content Include="Content\css\themes\default\assets\fonts\brand-icons.woff" />
+    <Content Include="Content\css\themes\default\assets\fonts\brand-icons.woff2" />
+    <Content Include="Content\css\themes\default\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\css\themes\default\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\css\themes\default\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\css\themes\default\assets\fonts\icons.eot" />
+    <Content Include="Content\css\themes\default\assets\fonts\icons.otf" />
+    <Content Include="Content\css\themes\default\assets\fonts\icons.ttf" />
+    <Content Include="Content\css\themes\default\assets\fonts\icons.woff" />
+    <Content Include="Content\css\themes\default\assets\fonts\icons.woff2" />
+    <Content Include="Content\css\themes\default\assets\fonts\outline-icons.eot" />
+    <Content Include="Content\css\themes\default\assets\fonts\outline-icons.ttf" />
+    <Content Include="Content\css\themes\default\assets\fonts\outline-icons.woff" />
+    <Content Include="Content\css\themes\default\assets\fonts\outline-icons.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\lg.eot" />
+    <Content Include="Content\fonts\lg.ttf" />
+    <Content Include="Content\fonts\lg.woff" />
+    <Content Include="File\HDSD Website.docx" />
+    <Content Include="Content\scss\test.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ReportBGT\ListReportBGT.cshtml" />
+    <None Include="Properties\PublishProfiles\demo.khanhhoi.vn.pubxml" />
+    <Content Include="Views\Reports\BusinessReport.cshtml" />
+    <Content Include="Views\Utilities\ListUtilities.cshtml" />
+    <Content Include="Views\Administration\Admin.cshtml" />
+    <Content Include="Views\ReportBGT\ViolateSpeedOverDetails.cshtml" />
+    <Content Include="Views\ReportBGT\Itinerary.cshtml" />
+    <Content Include="Views\ReportBGT\TimeDrivingContinuous.cshtml" />
+    <Content Include="Views\ReportBGT\ViolateTransferDetails.cshtml" />
+    <Content Include="Views\ReportBGT\StatisticsSpeedViolation.cshtml" />
+    <Content Include="Views\ReportBGT\DrivingContinuousDetails.cshtml" />
+    <Content Include="Views\ReportBGT\DrivingInDayDetails.cshtml" />
+    <Content Include="Views\ReportBGT\ViolateSummaries.cshtml" />
+    <Content Include="Views\ReportBGT\SpeedVehicle.cshtml" />
+    <Content Include="Views\ReportBGT\SpeedOver.cshtml" />
+    <Content Include="Views\ReportBGT\StopReport.cshtml" />
+    <Content Include="Views\ReportBGT\GeneralReportByVehicle.cshtml" />
+    <Content Include="Views\ReportBGT\GeneralReportByDriver.cshtml" />
+    <Content Include="Views\ReportBGT\DrivingTimeOfDay.cshtml" />
+    <Content Include="Views\Reports\ActivitySummary.cshtml" />
+    <Content Include="Views\Reports\ActivityDetail.cshtml" />
+    <Content Include="Views\Reports\ActivitySummaryKilometer.cshtml" />
+    <Content Include="Views\Reports\Stop.cshtml" />
+    <Content Include="Views\Reports\VehicleSendData.cshtml" />
+    <Content Include="Views\Reports\InOutStation.cshtml" />
+    <Content Include="Views\Reports\AirConditioner.cshtml" />
+    <Content Include="Views\Reports\FuelConsumptionSummary.cshtml" />
+    <Content Include="Views\Reports\FuelConsumptionDaily.cshtml" />
+    <Content Include="Views\Reports\ReportPourFuel.cshtml" />
+    <Content Include="Views\Reports\SignalLoss.cshtml" />
+    <EmbeddedResource Include="Resources\Language.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Language.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Language.vi.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.vi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Language.km.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.km.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Views\Share\_Layout_bk.cshtml" />
+    <Content Include="Views\Home\Login_bk.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Share\_Layout.cshtml" />
+    <Content Include="Views\Home\PlayBackJourney.cshtml" />
+    <Content Include="Views\Share\_Layout_PlayBackJourney.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62880</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62880/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\BuildWebCompiler.1.12.405\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildWebCompiler.1.12.405\build\BuildWebCompiler.targets'))" />
+  </Target>
+  <Import Project="..\packages\BuildWebCompiler.1.12.405\build\BuildWebCompiler.targets" Condition="Exists('..\packages\BuildWebCompiler.1.12.405\build\BuildWebCompiler.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

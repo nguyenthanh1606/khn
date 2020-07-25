@@ -1,0 +1,83 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+:root {
+  --mau-xanh-ngoc: #44ecc8;
+  --mau-xanh-duong: #48d5e5;
+  --mau-xam-02: #e0e0e0;
+  --mau-xam-03: #bdbdbd;
+  --mau-xam-01: #f5f5f5;
+  --mau-xam-nhat: #fafafa;
+  --mau-trang-01: #ffffff;
+  --mau-trang-02: #f5f5f5;
+  --mau-trang-03: #fef1f1;
+  --mau-vang-09: #f9a825;
+  --mau-xam-dam: #212121;
+  --mau-den-1b: #1b1b1b;
+  --mau-xanh-la-nhat: #7ac489;
+  --mau-xanh-la-vua: #1abc9c;
+  --mau-do-nhat: #f95a61;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: #fff;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.center{
+    text-align: center;
+}
+
+.container-fluid{
+    width: 100%;
+}
+input{
+    border: none;
+    outline: none;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+.header-logo{
+    margin: 0 auto;
+}
+
+
+.modal{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.break_wrord{
+    white-space: nowrap; 
+    width: 350px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.icon_status_feedback img{
+    width: 25px;
+}
+.panel-heading{
+    letter-spacing: 0.5px;
+}

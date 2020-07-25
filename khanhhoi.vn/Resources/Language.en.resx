@@ -1,0 +1,1115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lbbaocao" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="lbbaocaobatdieuhoa" xml:space="preserve">
+    <value>Report turned on air conditioner</value>
+  </data>
+  <data name="lbbaocaobogiaothong" xml:space="preserve">
+    <value>Report to Ministry of Transport</value>
+  </data>
+  <data name="lbbaocaochitiethoatdong" xml:space="preserve">
+    <value>Detailed activity report</value>
+  </data>
+  <data name="lbbaocaochitiethoatdong_content" xml:space="preserve">
+    <value>OPERATIONAL DETAIL REPORT</value>
+  </data>
+  <data name="lbbaocaochitietvipham10gio_content" xml:space="preserve">
+    <value>REPORT DETAILED VIOLATIONS OF CONTINUOUS DRIVING TIME (10 HOURS)</value>
+  </data>
+  <data name="lbbaocaochitietvipham4gio_content" xml:space="preserve">
+    <value>REPORT DETAILING VIOLATIONS OF CONTINUOUS DRIVING TIME (4 HOURS)</value>
+  </data>
+  <data name="lbbaocaodoanhnghiep" xml:space="preserve">
+    <value>Business Report</value>
+  </data>
+  <data name="lbbaocaodungdo" xml:space="preserve">
+    <value>Report stopping</value>
+  </data>
+  <data name="lbbaocaodungdo_content" xml:space="preserve">
+    <value>STOP REPORT</value>
+  </data>
+  <data name="lbbaocaohanhtrinhxechay_content" xml:space="preserve">
+    <value>RUNNING TRAINING REPORT</value>
+  </data>
+  <data name="lbbaocaohoatdong" xml:space="preserve">
+    <value>Activity report</value>
+  </data>
+  <data name="lbbaocaomaylanh_content" xml:space="preserve">
+    <value>REFRIGERATOR REPORT</value>
+  </data>
+  <data name="lbbaocaonhienlieu" xml:space="preserve">
+    <value>Fuel report</value>
+  </data>
+  <data name="lbbaocaoquatocdogioihan_content" xml:space="preserve">
+    <value>REPORT OVER LIMITATION SPEED</value>
+  </data>
+  <data name="lbbaocaotatmokhoadien" xml:space="preserve">
+    <value>Report turn off / unlock the electric</value>
+  </data>
+  <data name="lbbaocaotatmokhoadien_content" xml:space="preserve">
+    <value>REPORT ON ELECTRICITY OFF / OPEN</value>
+  </data>
+  <data name="lbbaocaotatmomototai" xml:space="preserve">
+    <value>Report on / off load motor</value>
+  </data>
+  <data name="lbbaocaotatmomototai_content" xml:space="preserve">
+    <value>REPORT OFF / OPEN DOWNLOAD DOWNLOAD</value>
+  </data>
+  <data name="lbbaocaothapcau" xml:space="preserve">
+    <value>Report tower crane</value>
+  </data>
+  <data name="lbbaocaothoigianlaixelientuc_content" xml:space="preserve">
+    <value>REPORT CONTINUOUS DRIVING TIME</value>
+  </data>
+  <data name="lbbaocaothoigianlaixetrongngay" xml:space="preserve">
+    <value>Report driving time of the day</value>
+  </data>
+  <data name="lbbaocaothoigianlaixetrongngay_content" xml:space="preserve">
+    <value>REPORT DRIVING TIME IN THE DAY</value>
+  </data>
+  <data name="lbbaocaotocdoxechay_content" xml:space="preserve">
+    <value>RUNNING SPEED REPORT</value>
+  </data>
+  <data name="lbbaocaotonghop" xml:space="preserve">
+    <value>Synthesis report</value>
+  </data>
+  <data name="lbbaocaotonghophoatdong" xml:space="preserve">
+    <value>Summary activity report</value>
+  </data>
+  <data name="lbbaocaotonghophoatdong_content" xml:space="preserve">
+    <value>GENERAL REPORT OF OPERATION</value>
+  </data>
+  <data name="lbbaocaotonghopkmxehoatdong" xml:space="preserve">
+    <value>General report of vehicle operation km</value>
+  </data>
+  <data name="lbbaocaotonghopkmxehoatdong_content" xml:space="preserve">
+    <value>GENERAL REPORT OF KM VEHICLE ACTIVITIES</value>
+  </data>
+  <data name="lbbaocaotonghoptheolaixe" xml:space="preserve">
+    <value>Summary report by driver</value>
+  </data>
+  <data name="lbbaocaotonghoptheolaixe_content" xml:space="preserve">
+    <value>SYNTHESIS REPORT ON DRIVING</value>
+  </data>
+  <data name="lbbaocaotonghoptheoxe" xml:space="preserve">
+    <value>General report by vehicle</value>
+  </data>
+  <data name="lbbaocaotonghoptheoxe_content" xml:space="preserve">
+    <value>GENERAL REPORT BY CAR</value>
+  </data>
+  <data name="lbbaocaotonghoptieuhaonhienlieu" xml:space="preserve">
+    <value>General report of fuel consumption</value>
+  </data>
+  <data name="lbbaocaotonghoptieuhaonhienlieu_content" xml:space="preserve">
+    <value>FUNDAMENTAL CONSUMPTION REPORT</value>
+  </data>
+  <data name="lbbaocaott09_bgt" xml:space="preserve">
+    <value>Report TT09 / 2015 / TT - BGTVT</value>
+  </data>
+  <data name="lbbaocaott73_bgt" xml:space="preserve">
+    <value>Report TT73 / 2014 / TT - BGTVT</value>
+  </data>
+  <data name="lbbatdau" xml:space="preserve">
+    <value>Begin</value>
+  </data>
+  <data name="lbbienso" xml:space="preserve">
+    <value>License plate</value>
+  </data>
+  <data name="lbcaiapp" xml:space="preserve">
+    <value>Install the app on your phone</value>
+  </data>
+  <data name="lbcaocaotonghopkmxehoatdong_content" xml:space="preserve">
+    <value>GENERAL REPORT OF KM VEHICLE ACTIVITIES</value>
+  </data>
+  <data name="lbcauhinhhienthilotrinh" xml:space="preserve">
+    <value>Configurable route display</value>
+  </data>
+  <data name="lbchinhanh1" xml:space="preserve">
+    <value>Branch 1</value>
+  </data>
+  <data name="lbchitietvipham10gio" xml:space="preserve">
+    <value>Details of continuous driving time violation (10 hours)</value>
+  </data>
+  <data name="lbchitietvipham4gio" xml:space="preserve">
+    <value>Details of continuous driving time violation (4 hours)</value>
+  </data>
+  <data name="lbchoncauhinh" xml:space="preserve">
+    <value>Choose a configuration</value>
+  </data>
+  <data name="lbchonhinh" xml:space="preserve">
+    <value>Choose picture ...</value>
+  </data>
+  <data name="lbchonngay" xml:space="preserve">
+    <value>Pick a date</value>
+  </data>
+  <data name="lbchuacogps" xml:space="preserve">
+    <value>no GPS yet</value>
+  </data>
+  <data name="lbchuacothongtinlaixe" xml:space="preserve">
+    <value>No driving information</value>
+  </data>
+  <data name="lbcua" xml:space="preserve">
+    <value>Door</value>
+  </data>
+  <data name="lbcuamo" xml:space="preserve">
+    <value>open door</value>
+  </data>
+  <data name="lbdangcapnhatdulieu" xml:space="preserve">
+    <value>Updating data, please wait a moment ..</value>
+  </data>
+  <data name="lbdangnhap" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="lbdangnhaptaikhoan" xml:space="preserve">
+    <value>Log in to your account</value>
+  </data>
+  <data name="lbdangxuat" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="lbdanhgiachatluongdichvu" xml:space="preserve">
+    <value>Assess the quality of service</value>
+  </data>
+  <data name="lbdanhmucthe" xml:space="preserve">
+    <value>Card catalog</value>
+  </data>
+  <data name="lbdanhsachlaixe" xml:space="preserve">
+    <value>Driving list</value>
+  </data>
+  <data name="lbdanhsachnguoidung" xml:space="preserve">
+    <value>User list</value>
+  </data>
+  <data name="lbdanhsachsim" xml:space="preserve">
+    <value>Sim list</value>
+  </data>
+  <data name="lbdanhsachthongbao" xml:space="preserve">
+    <value>List of notifications</value>
+  </data>
+  <data name="lbdanhsachxe" xml:space="preserve">
+    <value>Car list</value>
+  </data>
+  <data name="lbdau" xml:space="preserve">
+    <value>Parking</value>
+  </data>
+  <data name="lbden" xml:space="preserve">
+    <value>Come</value>
+  </data>
+  <data name="lbdenluc" xml:space="preserve">
+    <value>By time</value>
+  </data>
+  <data name="lbdenngay" xml:space="preserve">
+    <value>To date</value>
+  </data>
+  <data name="lbdiachi" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="lbdiachibatdau" xml:space="preserve">
+    <value>Address to start</value>
+  </data>
+  <data name="lbdiachiketthuc" xml:space="preserve">
+    <value>The address ends</value>
+  </data>
+  <data name="lbdiachi_cty" xml:space="preserve">
+    <value>184/1 Nguyen Van Block, Ward 9, Go Vap District, HCM</value>
+  </data>
+  <data name="lbdiadiem" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="lbdiadiembatdau" xml:space="preserve">
+    <value>Place to start</value>
+  </data>
+  <data name="lbdiadiemgannhat" xml:space="preserve">
+    <value>Nearest location</value>
+  </data>
+  <data name="lbdiadiemketthuc" xml:space="preserve">
+    <value>The place ends</value>
+  </data>
+  <data name="lbdichuyen" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="lbdidong" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="lbdienthoai" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="lbdong" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="lbdung" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="lbdungdo" xml:space="preserve">
+    <value>Conflict</value>
+  </data>
+  <data name="lbghichumattinhieu" xml:space="preserve">
+    <value>Notes lost signal</value>
+  </data>
+  <data name="lbgiamsat" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="lbgopdungdo" xml:space="preserve">
+    <value>Include stop parking</value>
+  </data>
+  <data name="lbgplx" xml:space="preserve">
+    <value>GPLX</value>
+  </data>
+  <data name="lbgpstot" xml:space="preserve">
+    <value>Good GPS.</value>
+  </data>
+  <data name="lbguiphanhoi" xml:space="preserve">
+    <value>Send feedback</value>
+  </data>
+  <data name="lbhang" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="lbhanhtrinhxechay" xml:space="preserve">
+    <value>Car journey running</value>
+  </data>
+  <data name="lbhethandichvu" xml:space="preserve">
+    <value>Service expires</value>
+  </data>
+  <data name="lbhotro" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="lbhotrokhachhang" xml:space="preserve">
+    <value>Customer support</value>
+  </data>
+  <data name="lbhovaten" xml:space="preserve">
+    <value>First and last name</value>
+  </data>
+  <data name="lbhuongdan" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="lbimei" xml:space="preserve">
+    <value>Imei</value>
+  </data>
+  <data name="lbkeodai" xml:space="preserve">
+    <value>Prolonged</value>
+  </data>
+  <data name="lbketthuc" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="lbkhoa" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="lbkythuat" xml:space="preserve">
+    <value>Skill</value>
+  </data>
+  <data name="lblangnghedephattrien" xml:space="preserve">
+    <value>LISTENING TO DEVELOP</value>
+  </data>
+  <data name="lblit" xml:space="preserve">
+    <value>Liter</value>
+  </data>
+  <data name="lbluuy" xml:space="preserve">
+    <value>Note: the application runs best on browsers</value>
+  </data>
+  <data name="lbmatgps" xml:space="preserve">
+    <value>Lost GPS.</value>
+  </data>
+  <data name="lbmatkhau" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lbmatkhaucu" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="lbmatkhaumoi" xml:space="preserve">
+    <value>A new password</value>
+  </data>
+  <data name="lbmatllvachuacogps" xml:space="preserve">
+    <value>lost contact and no GPS</value>
+  </data>
+  <data name="lbmatll_" xml:space="preserve">
+    <value>lost keeping in touch</value>
+  </data>
+  <data name="lbmattinhieu" xml:space="preserve">
+    <value>Lost signal</value>
+  </data>
+  <data name="lbmattinhieuGPS01" xml:space="preserve">
+    <value>GPS signal loss&gt; 5 minutes and less than 150 minutes</value>
+  </data>
+  <data name="lbmaylanh" xml:space="preserve">
+    <value>Air-conditioner</value>
+  </data>
+  <data name="lbmo" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="lbmokhoadien" xml:space="preserve">
+    <value>Electric lock unlock</value>
+  </data>
+  <data name="lbmomay" xml:space="preserve">
+    <value>Open machine</value>
+  </data>
+  <data name="lbnapthongtinlaixe" xml:space="preserve">
+    <value>Load driving information</value>
+  </data>
+  <data name="lbnganhang" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="lbngay" xml:space="preserve">
+    <value>Day</value>
+  </data>
+  <data name="lbngaycap" xml:space="preserve">
+    <value>Date Range</value>
+  </data>
+  <data name="lbngayhethan" xml:space="preserve">
+    <value>Expiration date</value>
+  </data>
+  <data name="lbngayhethandichvu" xml:space="preserve">
+    <value>Service expiry date</value>
+  </data>
+  <data name="lbngaytao" xml:space="preserve">
+    <value>date created</value>
+  </data>
+  <data name="lbnguoidungnhancanhbao" xml:space="preserve">
+    <value>User receives alert</value>
+  </data>
+  <data name="lbnhandulieucuoi" xml:space="preserve">
+    <value>Received the last data</value>
+  </data>
+  <data name="lbnhaplaimatkhaumoi" xml:space="preserve">
+    <value>Enter a new password</value>
+  </data>
+  <data name="lbnhapnhanhlaixe" xml:space="preserve">
+    <value>Enter fast drive</value>
+  </data>
+  <data name="lbnhapnhanhthongtinsim" xml:space="preserve">
+    <value>Enter sim information quickly</value>
+  </data>
+  <data name="lbnhapnhieuxe01" xml:space="preserve">
+    <value>(You can enter more than one car, separated by commas)</value>
+  </data>
+  <data name="lbnhapthongtindangkiem" xml:space="preserve">
+    <value>Enter the registration information</value>
+  </data>
+  <data name="lbnhapthongtinsim" xml:space="preserve">
+    <value>Enter sim information</value>
+  </data>
+  <data name="lbnhapvaoxem" xml:space="preserve">
+    <value>Click on watch</value>
+  </data>
+  <data name="lbnhienlieu" xml:space="preserve">
+    <value>Fuel</value>
+  </data>
+  <data name="lbnoicap" xml:space="preserve">
+    <value>Issued by</value>
+  </data>
+  <data name="lbnoidung" xml:space="preserve">
+    <value>content</value>
+  </data>
+  <data name="lbnoidunggopy" xml:space="preserve">
+    <value>Content type (*)</value>
+  </data>
+  <data name="lbphanhoi" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="lbphanquyennhomxe" xml:space="preserve">
+    <value>Decentralized vehicle group</value>
+  </data>
+  <data name="lbquangduong" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="lbquanlyxe" xml:space="preserve">
+    <value>Vehicle management</value>
+  </data>
+  <data name="lbquantri" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="lbquantricanhbao" xml:space="preserve">
+    <value>Administration alerts</value>
+  </data>
+  <data name="lbquantridangkiem" xml:space="preserve">
+    <value>Administer the registry</value>
+  </data>
+  <data name="lbquantrihethong" xml:space="preserve">
+    <value>System management</value>
+  </data>
+  <data name="lbquantrinhom" xml:space="preserve">
+    <value>Group administration</value>
+  </data>
+  <data name="lbquantrisim" xml:space="preserve">
+    <value>Admin sim</value>
+  </data>
+  <data name="lbquantrithongbao" xml:space="preserve">
+    <value>Administration notification</value>
+  </data>
+  <data name="lbquantrixe" xml:space="preserve">
+    <value>Vehicle management</value>
+  </data>
+  <data name="lbquatocdo" xml:space="preserve">
+    <value>over speed</value>
+  </data>
+  <data name="lbquatocdogioihan" xml:space="preserve">
+    <value>Speed ​​limit</value>
+  </data>
+  <data name="lbsim" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="lbsodienthoai" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="lbsoluongdau" xml:space="preserve">
+    <value>Amount of oil</value>
+  </data>
+  <data name="lbstt" xml:space="preserve">
+    <value>No.</value>
+  </data>
+  <data name="lbtailaitrang" xml:space="preserve">
+    <value>Reload the page</value>
+  </data>
+  <data name="lbtaixe" xml:space="preserve">
+    <value>Driver</value>
+  </data>
+  <data name="lbtaonguoidung" xml:space="preserve">
+    <value>Create user</value>
+  </data>
+  <data name="lbtaonhanhnguoidung" xml:space="preserve">
+    <value>Create users quickly</value>
+  </data>
+  <data name="lbtat" xml:space="preserve">
+    <value>Turn off</value>
+  </data>
+  <data name="lbtatca" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="lbtatkhoadien" xml:space="preserve">
+    <value>Turn off the electric lock</value>
+  </data>
+  <data name="lbtatmay" xml:space="preserve">
+    <value>Shutdown</value>
+  </data>
+  <data name="lbtendangnhap" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="lbtenlaixe" xml:space="preserve">
+    <value>Driver name</value>
+  </data>
+  <data name="lbtentaikhoan" xml:space="preserve">
+    <value>account name</value>
+  </data>
+  <data name="lbtenthietbi" xml:space="preserve">
+    <value>Device name</value>
+  </data>
+  <data name="lbthanhtoan" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="lbthanhtoantructieptai" xml:space="preserve">
+    <value>Pay directly at</value>
+  </data>
+  <data name="lbthaydoimatkhau" xml:space="preserve">
+    <value>Change the password</value>
+  </data>
+  <data name="lbthemlaixe" xml:space="preserve">
+    <value>More driver</value>
+  </data>
+  <data name="lbthoigian" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="lbthoigianbatdau" xml:space="preserve">
+    <value>Time to start</value>
+  </data>
+  <data name="lbthoigianketthuc" xml:space="preserve">
+    <value>End time</value>
+  </data>
+  <data name="lbthoigianlai" xml:space="preserve">
+    <value>Drive time</value>
+  </data>
+  <data name="lbthoigianlaixelientuc" xml:space="preserve">
+    <value>Continuous driving time</value>
+  </data>
+  <data name="lbthoigianmo" xml:space="preserve">
+    <value>Open time</value>
+  </data>
+  <data name="lbthoigianngunghoatdong" xml:space="preserve">
+    <value>Downtime</value>
+  </data>
+  <data name="lbthoigiantat" xml:space="preserve">
+    <value>Time off</value>
+  </data>
+  <data name="lbthongbao" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="lbthongtin" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="lbthongtincongty" xml:space="preserve">
+    <value>Company information</value>
+  </data>
+  <data name="lbthongtinnguoidung" xml:space="preserve">
+    <value>USER INFORMATION</value>
+  </data>
+  <data name="lbthongtintaikhoan" xml:space="preserve">
+    <value>Account information</value>
+  </data>
+  <data name="lbthongtinthietbi" xml:space="preserve">
+    <value>Device Information</value>
+  </data>
+  <data name="lbthongtinthietbi_content" xml:space="preserve">
+    <value>DEVICE INFORMATION</value>
+  </data>
+  <data name="lbtienich" xml:space="preserve">
+    <value>Utilities</value>
+  </data>
+  <data name="lbtimkiem" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="lbtoado" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="lbtoadobatdau" xml:space="preserve">
+    <value>Coordinates begin</value>
+  </data>
+  <data name="lbtoadoketthuc" xml:space="preserve">
+    <value>Coordinates end</value>
+  </data>
+  <data name="lbtocdo" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="lbtocdocuaxe" xml:space="preserve">
+    <value>Speed ​​of the car</value>
+  </data>
+  <data name="lbtocdotoida" xml:space="preserve">
+    <value>Max speed</value>
+  </data>
+  <data name="lbtocdotrungbinh" xml:space="preserve">
+    <value>Average speed</value>
+  </data>
+  <data name="lbtongkm" xml:space="preserve">
+    <value>Total kilometers</value>
+  </data>
+  <data name="lbtongsoxe" xml:space="preserve">
+    <value>Total vehicles</value>
+  </data>
+  <data name="lbtrangchu" xml:space="preserve">
+    <value>Home page</value>
+  </data>
+  <data name="lbtrangthai" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lbtrangthaigps" xml:space="preserve">
+    <value>GPS status.</value>
+  </data>
+  <data name="lbtrusochinh" xml:space="preserve">
+    <value>Headquarters</value>
+  </data>
+  <data name="lbtu" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="lbtuluc" xml:space="preserve">
+    <value>Since</value>
+  </data>
+  <data name="lbtungay" xml:space="preserve">
+    <value>Since</value>
+  </data>
+  <data name="lbvantockmh" xml:space="preserve">
+    <value>Speed ​​(km / h)</value>
+  </data>
+  <data name="lbvantoctoida" xml:space="preserve">
+    <value>Top speed</value>
+  </data>
+  <data name="lbvantoctrungbinh" xml:space="preserve">
+    <value>Average velocity</value>
+  </data>
+  <data name="lbvitri" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="lbxedungdonomay" xml:space="preserve">
+    <value>The vehicle stops the engine or the vehicle runs at a normal speed</value>
+  </data>
+  <data name="lbxedungdotatmay" xml:space="preserve">
+    <value>The car stops parked</value>
+  </data>
+  <data name="lbxem" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="lbxemlailotrinh" xml:space="preserve">
+    <value>Review the route</value>
+  </data>
+  <data name="lbyeucaucungcapdulieu" xml:space="preserve">
+    <value>Request for providing data TCBBVN</value>
+  </data>
+  <data name="lbynghiabieutuongxe" xml:space="preserve">
+    <value>Meaning car symbol</value>
+  </data>
+  <data name="tbbellone01" xml:space="preserve">
+    <value>In case of overload if unable to access the website khanhhoi.vn.
+ Please visit with the domain name after khanhhoi.com.vn.
+ If you need assistance, please contact the call center</value>
+  </data>
+  <data name="tbbellone02" xml:space="preserve">
+    <value>Is pleased to inform customers of some form of service payment</value>
+  </data>
+  <data name="tbcapnhatthanhcong" xml:space="preserve">
+    <value>Update successful.</value>
+  </data>
+  <data name="tbcapnhatthatbai" xml:space="preserve">
+    <value>Update failed.</value>
+  </data>
+  <data name="tbchuacodulieu" xml:space="preserve">
+    <value>No data yet.</value>
+  </data>
+  <data name="tbdangnhapthatbai" xml:space="preserve">
+    <value>Login failed or has not been granted permission</value>
+  </data>
+  <data name="tbemailkhonghople" xml:space="preserve">
+    <value>Invalid email. Please check the form: abc@gmail.com or test123@abc.xyz</value>
+  </data>
+  <data name="tbgopythanhcong" xml:space="preserve">
+    <value>Submit a successful comment.</value>
+  </data>
+  <data name="tbgopythatbai" xml:space="preserve">
+    <value>Comment failed.</value>
+  </data>
+  <data name="tbhetphienlamviec" xml:space="preserve">
+    <value>End of session</value>
+  </data>
+  <data name="tbkhongketnoiduocdulieu" xml:space="preserve">
+    <value>No data connection.</value>
+  </data>
+  <data name="tbmatkhaumoikhongtrung" xml:space="preserve">
+    <value>New password does not match.</value>
+  </data>
+  <data name="tbmuathietbi" xml:space="preserve">
+    <value>Purchase journey monitoring equipment customers please contact the switchboard:</value>
+  </data>
+  <data name="tbnhapdayduthongtin" xml:space="preserve">
+    <value>Please enter full information.</value>
+  </data>
+  <data name="tbnhaplaimatkhaumoi" xml:space="preserve">
+    <value>Please retype the new password.</value>
+  </data>
+  <data name="tbnhapmatkhaucu" xml:space="preserve">
+    <value>Please enter the old password.</value>
+  </data>
+  <data name="tbnhapmatkhaumoi" xml:space="preserve">
+    <value>Please enter a new password.</value>
+  </data>
+  <data name="tbsaimatkhaucu" xml:space="preserve">
+    <value>Wrong old password.</value>
+  </data>
+  <data name="tbsodienthoaikhonghople" xml:space="preserve">
+    <value>Invalid phone number.</value>
+  </data>
+  <data name="tbthaydoimatkhauthanhcong" xml:space="preserve">
+    <value>Password changed successfully.</value>
+  </data>
+  <data name="tbthaydoithongtinthanhcong" xml:space="preserve">
+    <value>Change information successfully.</value>
+  </data>
+  <data name="tbvuilongnhapmatkhau" xml:space="preserve">
+    <value>Please enter a password</value>
+  </data>
+  <data name="tbvuilongnhaptendangnhap" xml:space="preserve">
+    <value>Please enter your username</value>
+  </data>
+  <data name="lbcamera" xml:space="preserve">
+    <value>Camera journey</value>
+  </data>
+  <data name="lbcanhbaongugat" xml:space="preserve">
+    <value>Drowsiness warning</value>
+  </data>
+  <data name="lbchude" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="lbhinhthuc1" xml:space="preserve">
+    <value>Form 1</value>
+  </data>
+  <data name="lbhinhthuc2" xml:space="preserve">
+    <value>Form 2</value>
+  </data>
+  <data name="lbluu" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="lbtrusovanphong" xml:space="preserve">
+    <value>Head office</value>
+  </data>
+  <data name="lbxemlotrinh" xml:space="preserve">
+    <value>See the route</value>
+  </data>
+  <data name="tbbellone01a" xml:space="preserve">
+    <value>Trường hợp quá tải nếu không truy cập được vào website</value>
+  </data>
+  <data name="tbbellone01b" xml:space="preserve">
+    <value>Quý khách vui lòng truy cập với tên miền sau</value>
+  </data>
+  <data name="tbbellone01c" xml:space="preserve">
+    <value>Nếu cần sự hỗ trợ, Quý khách vui lòng liên hệ qua tổng đài</value>
+  </data>
+  <data name="tbbellone021" xml:space="preserve">
+    <value>Xin trân trọng thông báo đến quý khách hàng một số hình thức thanh toán dịch vụ</value>
+  </data>
+  <data name="lbghichu" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="lbconlai" xml:space="preserve">
+    <value>Remain</value>
+  </data>
+  <data name="lbcon" xml:space="preserve">
+    <value>still</value>
+  </data>
+  <data name="lbgiay" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="lbgio" xml:space="preserve">
+    <value>hours</value>
+  </data>
+  <data name="lbphut" xml:space="preserve">
+    <value>minute</value>
+  </data>
+  <data name="lbxedichuyen" xml:space="preserve">
+    <value>Moving vehicle</value>
+  </data>
+  <data name="lbxedungdo" xml:space="preserve">
+    <value>The car stopped</value>
+  </data>
+  <data name="lbxemattinhieu" xml:space="preserve">
+    <value>Vehicle loses GPS signal, service expires, incident warning, speeding ...</value>
+  </data>
+  <data name="lbhuongdansudung" xml:space="preserve">
+    <value>User manual</value>
+  </data>
+  <data name="btntaixuong" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="btnxemonline" xml:space="preserve">
+    <value>View online</value>
+  </data>
+  <data name="tbvuilongchonhinhthucxem" xml:space="preserve">
+    <value>Please select view form?</value>
+  </data>
+  <data name="btnquaylai" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="lbhinhanh" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="btnhuy" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="btnxacnhan" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="lbdanhsachtaikhoan" xml:space="preserve">
+    <value>List Account</value>
+  </data>
+  <data name="lbdanhsachthietbi" xml:space="preserve">
+    <value>List Device</value>
+  </data>
+  <data name="lbdichvuhethan" xml:space="preserve">
+    <value>Service expired</value>
+  </data>
+  <data name="lbdoithongtinthietbi" xml:space="preserve">
+    <value>Change device information</value>
+  </data>
+  <data name="lbnguoitao" xml:space="preserve">
+    <value>User created</value>
+  </data>
+  <data name="lbnhomxe" xml:space="preserve">
+    <value>Group Car</value>
+  </data>
+  <data name="lbsua" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lbtaikhoan" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="lbtaomoithongtinlaixe" xml:space="preserve">
+    <value>Create new driving information</value>
+  </data>
+  <data name="lbtenkhachhang" xml:space="preserve">
+    <value>Customer name</value>
+  </data>
+  <data name="lbthem" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="lbthietbi" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="lbthietbivataixe" xml:space="preserve">
+    <value>Device &amp; Drivers</value>
+  </data>
+  <data name="lbthongtintaixe" xml:space="preserve">
+    <value>Driver information</value>
+  </data>
+  <data name="lbxoa" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="tbbanchacchanmuonxoatk" xml:space="preserve">
+    <value>You definitely want to delete the account</value>
+  </data>
+  <data name="tbbankhongcoquyen" xml:space="preserve">
+    <value>You do not have rights to add, edit, delete.</value>
+  </data>
+  <data name="tbchucnangdangtamkhoa" xml:space="preserve">
+    <value>The function is temporarily locked</value>
+  </data>
+  <data name="tbdanhsachxehethandv" xml:space="preserve">
+    <value>The device list is and is about to expire</value>
+  </data>
+  <data name="tbvuilongchondstaikhoan" xml:space="preserve">
+    <value>Please select an account list</value>
+  </data>
+  <data name="tbxoataixethanhcong" xml:space="preserve">
+    <value>Are you sure you want to delete the driver</value>
+  </data>
+  <data name="lbdaocua" xml:space="preserve">
+    <value>Reversed door</value>
+  </data>
+  <data name="lbdaokhoa" xml:space="preserve">
+    <value>Reverse lock</value>
+  </data>
+  <data name="lbdnquanly" xml:space="preserve">
+    <value>Business management</value>
+  </data>
+  <data name="lbdungtich" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="lbdungtichbinhnhienlieu" xml:space="preserve">
+    <value>Fuel tank capacity (liters)</value>
+  </data>
+  <data name="lbgiaypheplaixe" xml:space="preserve">
+    <value>Driving license</value>
+  </data>
+  <data name="lbkhongcodulieutttaixe" xml:space="preserve">
+    <value>No driver information data</value>
+  </data>
+  <data name="lbloaivantai" xml:space="preserve">
+    <value>Type of transport</value>
+  </data>
+  <data name="lbloaixe" xml:space="preserve">
+    <value>Car kind</value>
+  </data>
+  <data name="lbmuctieuhaonhienlieu100km" xml:space="preserve">
+    <value>Fuel consumption above 100km</value>
+  </data>
+  <data name="lbphienban" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="lbso" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="lbsocmnd" xml:space="preserve">
+    <value>Identity card</value>
+  </data>
+  <data name="lbsothung" xml:space="preserve">
+    <value>Number of bins</value>
+  </data>
+  <data name="lbsuathongtinlaixe" xml:space="preserve">
+    <value>Edit driving information</value>
+  </data>
+  <data name="lbsuathongtinthietbi" xml:space="preserve">
+    <value>Edit device information</value>
+  </data>
+  <data name="lbtaitrong" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="lbtentaixe" xml:space="preserve">
+    <value>Driver name</value>
+  </data>
+  <data name="lbtinh" xml:space="preserve">
+    <value>The provincial</value>
+  </data>
+  <data name="tbbankhongcoquyenxemdstk" xml:space="preserve">
+    <value>You do not have permission to view the account list</value>
+  </data>
+  <data name="tbcapnhatthongtinthietbithanhcong" xml:space="preserve">
+    <value>Update device information successfully</value>
+  </data>
+  <data name="tbcapnhatthongtinthietbithatbai" xml:space="preserve">
+    <value>Failed to update device information</value>
+  </data>
+  <data name="tbchinhsuathongtinthanhcong" xml:space="preserve">
+    <value>Edit information successfully</value>
+  </data>
+  <data name="tbchinhsuathongtinthatbai" xml:space="preserve">
+    <value>Information modification failed</value>
+  </data>
+  <data name="tbketnoidulieuthatbai" xml:space="preserve">
+    <value>Data connection failed</value>
+  </data>
+  <data name="tbkhongcodulieudstk" xml:space="preserve">
+    <value>There is no account listing data</value>
+  </data>
+  <data name="tbkhongcodulieuthongtintk" xml:space="preserve">
+    <value>No account information data</value>
+  </data>
+  <data name="tbsuatttaixethanhcong" xml:space="preserve">
+    <value>Correct driver information successfully</value>
+  </data>
+  <data name="tbsuatttaixethatbai" xml:space="preserve">
+    <value>Fixing driver information failed</value>
+  </data>
+  <data name="tbtaikhoandacovuilongchontkkhac" xml:space="preserve">
+    <value>Account already exists. Please choose another name</value>
+  </data>
+  <data name="tbthemtaikhoanthanhcong" xml:space="preserve">
+    <value>Add account successfully</value>
+  </data>
+  <data name="tbthemtaikhoanthatbai" xml:space="preserve">
+    <value>Add account failed</value>
+  </data>
+  <data name="tbthemtaixethanhcong" xml:space="preserve">
+    <value>Add successful driver</value>
+  </data>
+  <data name="tbthemtaixethatbai" xml:space="preserve">
+    <value>Add driver failed</value>
+  </data>
+  <data name="tbvuilongchondsxe" xml:space="preserve">
+    <value>Please select the car list</value>
+  </data>
+  <data name="tbvuilongchontaixedexoa" xml:space="preserve">
+    <value>Please select a driver to delete</value>
+  </data>
+  <data name="tbvuilongchontaixesuathongtin" xml:space="preserve">
+    <value>Please select a driver to correct the information</value>
+  </data>
+  <data name="tbvuilongchonxedethemtaixe" xml:space="preserve">
+    <value>Please select a vehicle (device) to add a driver</value>
+  </data>
+  <data name="tbvuilongnhapgplx" xml:space="preserve">
+    <value>Please enter the driver license number</value>
+  </data>
+  <data name="tbvuilongnhapsodienthoai" xml:space="preserve">
+    <value>Please enter the phone number</value>
+  </data>
+  <data name="tbvuilongnhaptentaixe" xml:space="preserve">
+    <value>Please enter the driver name</value>
+  </data>
+  <data name="tbxoataixethatbai" xml:space="preserve">
+    <value>Delete driver failed</value>
+  </data>
+  <data name="tbthanhcong" xml:space="preserve">
+    <value>success</value>
+  </data>
+  <data name="tbxoataikhoan" xml:space="preserve">
+    <value>Delete account</value>
+  </data>
+  <data name="lbdem" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="lbmacdinh" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="lbvetinh" xml:space="preserve">
+    <value>Satellite</value>
+  </data>
+</root>

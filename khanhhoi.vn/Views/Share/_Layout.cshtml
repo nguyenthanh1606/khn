@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>CÔNG TY TNHH VIỄN THÔNG KHÁNH HỘI</title>
+    <!-- for-mobile-apps -->
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0' name='viewport' />
+    <link rel="icon" type="image/x-icon" href="/images/Logo.ico" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Datetimepicker/jquery-1.8.3.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />*@
+    <link href="~/Content/css/daterangepicker.css" rel="stylesheet" />
+    <script src="~/Scripts/Datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script src="~/Scripts/Datetimepicker/bootstrap-datetimepicker.fr.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDnOHA00cQuMklVX8uVyYAxHwGoWQ9FmH4&libraries=places,geometry,drawing"></script>
+    <script src="~/Scripts/Gmap/v3_epoly.js"></script>
+    <script src="~/Scripts/markerwithlabel.js"></script>
+    <script src="~/Scripts/Gmap/markerclusterer.js"></script>
+    <script src="~/Scripts/Gmap/markerclusterer_compiled.js"></script>
+    <link href="~/Content/css/stylemain.css" rel="stylesheet" />
+    <link href="~/Content/css/rate.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="~/Content/css/lightgallery.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/css/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css?ver=01072020&&version=08072020&&1556" rel="stylesheet" />
+    <link href="~/Content/css/responsive/responsive.css?version=08072020&&1556" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        i {
+            margin-right: 5px;
+        }
+
+        .navbar {
+            position: fixed;
+        }
+
+        .navbar-brand {
+            padding: 0;
+        }
+
+        .nav > li > a {
+            padding: 8px 13px;
+        }
+
+        .navbar-nav > li > a {
+            line-height: 33px;
+        }
+
+
+
+        .navbar a {
+            padding: 0;
+        }
+
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="~/Scripts/stylemain.js"></script>
+    @*<script src="~/Scripts/select2.min.js"></script>*@
+    <script type="text/javascript">
+       
+        document.addEventListener("readystatechange", function (event) {
+            @{
+               if (Request.Cookies["userName_log"] != null && Request.Cookies["pass_log"] != null)
+               {
+                   @:document.getElementById('username').value = '@Request.Cookies["userName_log"].Value';
+                                                                   @:document.getElementById('password').value = '@Request.Cookies["pass_log"].Value';
+                                                                                       }
+               if (Request.Cookies["lang"] != null) {}
+           }
+           
+        });
+        
+        function ActionMenu(index) {
+            var alert_txt = "";
+            switch (index) {
+                case 1:
+                    location.href = "Logout";
+                    break;
+                default:
+                    break;
+            }
+        };
+    </script>
+</head>
+<body onload="document.write('<!doctype html><html><head><meta charset=utf-8></head><body><p>You cannot find this in the page source. (Your page needs to be in this document.write argument.)</p></body></html>');">
+    <div class="wrapper__">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed collapse" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./Index">
+                        <img src="~/images/logo/AD.png" alt="">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/Home/Index"><span><i class="fa fa-crosshairs" aria-hidden="true"></i></span> @khanhhoi.vn.Resources.Language.lbgiamsat</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                <span><i class="fa fa-pencil-square-o"></i></span> @khanhhoi.vn.Resources.Language.lbbaocao<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="show_bgt"><span><i class="fa fa-circle-o-notch"></i></span> @khanhhoi.vn.Resources.Language.lbbaocaobogiaothong</a></li>
+                                <li><a href="#" id="show_business"><span><i class="fa fa-circle-o-notch"></i></span> @khanhhoi.vn.Resources.Language.lbbaocaodoanhnghiep</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                <span><i class="fa fa-cogs"></i></span> @khanhhoi.vn.Resources.Language.lbquantri<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="show_taikhoan"><span><i class="fa fa-users"></i></span> @khanhhoi.vn.Resources.Language.lbtaikhoan</a></li>
+                                <li><a href="#" id="show_thietbi_taixe"><span><i class="fa fa-car"></i></span> @khanhhoi.vn.Resources.Language.lbthietbivataixe</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="show_tienich"><span><i class="fa fa-circle"></i></span>Tiện ích</a></li>
+                        <li><a href="#" id="show_comment"><span><i class="fa fa-comments-o"></i></span> @khanhhoi.vn.Resources.Language.lbphanhoi</a></li>
+
+                        <li><a href="#" data-toggle="modal" data-target="#mi-modal"><span><i class="fa fa-cog"></i></span> @khanhhoi.vn.Resources.Language.lbhuongdansudung</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                <span><i class="fa fa-user"></i></span> @(Request.Cookies["userName"] == null ? "" : Request.Cookies["userName"].Value) <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" id="show_admin"><span><i class="fa fa-address-card"></i></span> @khanhhoi.vn.Resources.Language.lbthongtintaikhoan</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="show_info_device_exp"><span><i class="fa fa-exclamation-triangle"></i></span> @khanhhoi.vn.Resources.Language.lbdichvuhethan</a>
+                                </li>
+                                <li><a href="#" onclick="ActionMenu(1);"><span><i class="fa fa-sign-out"></i></span> @khanhhoi.vn.Resources.Language.lbdangxuat</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="main">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h5 class="modal-title" id="myModalLabel">@khanhhoi.vn.Resources.Language.tbvuilongchonhinhthucxem</h5>
+                </div>
+                <div class="modal-footer">
+                    <a href="/File/HDSD Website.docx" download><button type="button" class="btn btn-default">@khanhhoi.vn.Resources.Language.btntaixuong</button></a>
+                    <a href="/File/HDSD-Website.html" target="_blank"><button type="button" class="btn btn-primary">@khanhhoi.vn.Resources.Language.btnxemonline</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/Main.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/daterangepicker.min.js"></script>
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    @*<script src="~/Scripts/popper.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="~/Scripts/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/lightgallery.min.js"></script>
+    <script src="~/Scripts/jquery.mousewheel.min.js"></script>
+    <script src="~/Scripts/lg-thumbnail.min.js"></script>
+    <script src="~/Scripts/lg-fullscreen.min.js"></script>
+
+    <script>
+
+
+        /* open sidebar for mobile */
+
+        window.onload = function () {
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var table_re = document.querySelector('.table-responsive-cus');
+            if (screenWidth <= 550) {
+                table_re.style.width = (screenWidth) + 'px';
+            }
+            if (screenHeight <= 640) {
+                table_re ? table_re.style.height = '300px' : '';
+            }
+        }
+        window.onresize = function () {
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var table_re = document.querySelector('.table-responsive-cus');
+            if (screenWidth <= 550) {
+                table_re.style.width = (screenWidth) + 'px';
+            }
+            if (screenHeight <= 640) {
+                table_re ? table_re.style.height = '300px' : '';
+            }
+        }
+
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+        var count = 0;
+        var index = 0;
+        var check = false;
+        function changeItem(x) {
+            var click_item = document.querySelector(`.wrapper_content[data-index="${x}"`);
+            var parent = click_item.parentElement;
+            var content_status_item_active = document.querySelector('.content-status_item.active');
+            var itemActive = document.querySelector('.wrapper_content.active');
+            itemActive ? itemActive.classList.remove('active') : '';
+            content_status_item_active ? content_status_item_active.classList.remove('active') : '';
+           
+            if (index != x) {
+                index = x;
+                click_item.classList.add('active');
+                parent.classList.add('active');
+            } else {
+                var isActive = parent.querySelector('.wrapper_content.active');
+                if (isActive || check == true) {
+                    check = !check;
+                    click_item.classList.add('active');
+                    parent.classList.add('active');
+                } else {
+                    check = true;
+                    click_item.classList.remove('active');
+                    parent.classList.remove('active');
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
