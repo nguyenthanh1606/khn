@@ -1,11 +1,10 @@
-﻿using khanhhoi.vn.Interfaces;
+﻿using khanhhoi.vn.Conenction;
+using khanhhoi.vn.Interfaces;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
-using MySql.Data.MySqlClient;
-using khanhhoi.vn.Conenction;
 
 namespace khanhhoi.vn.Repository
 {
@@ -13,40 +12,50 @@ namespace khanhhoi.vn.Repository
     {
         public khndb4Context TNCctx { get; set; }
         public Database Db { get; set; }
-        //  String connectionString = "";
-        public Repository_khndb4(String connectionString)
+        static string connectionString = null;
+        public string conn1 = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
+        public string conn2 = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB2"].ConnectionString;
+        public string conn3 = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB3"].ConnectionString;
+
+        public Repository_khndb4()
         {
+            if(connectionString == null)
+            {
+                connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
+            }
+
+            
             MySqlConnection connection = new MySqlConnection(connectionString);
-
-
-            // MySqlTransaction transaction = connection.BeginTransaction();
             try
             {
                 connection.Open();
                 this.TNCctx = new khndb4Context(connection, false);
 
-                // Interception/SQL logging
-                //   this.TNCctx.Database.Log = (string message) => { Console.WriteLine(message); };
+                this.Db = this.TNCctx.Database;
+            }
+            catch
+            {
+                connectionString = ChangeConnectString(connectionString);
+                connection.Close();
+                new Repository_khndb4();                
+            }
+        }
+        public Repository_khndb4(string connectionString)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                this.TNCctx = new khndb4Context(connection, false);
 
                 this.Db = this.TNCctx.Database;
-                //IEnumerable<GpsData> result = Db.SqlQuery<GpsData>("Select * from tbldata order by dataid desc limit 20");
-                // List<GpsData> list = result.ToList();
-                // Db.Connection.Close();
-
-
-                //transaction.Commit();
             }
             catch
             {
                 return;
-                //transaction.Rollback();
-                //throw;
             }
-
-
-
-
         }
+
         public IEnumerable<T> ExecuteSqlQuery<T>(string query)
         {
             try
@@ -59,7 +68,6 @@ namespace khanhhoi.vn.Repository
                 Console.WriteLine(e);
                 return null;
             }
-
         }
 
         public IEnumerable<T> ExecuteStoreProceduce<T>(string storeProceduce, Dictionary<string, string> parameters)
@@ -113,7 +121,6 @@ namespace khanhhoi.vn.Repository
             {
                 throw;
             }
-            
         }
 
         public void Dispose()
@@ -124,9 +131,14 @@ namespace khanhhoi.vn.Repository
             }
             catch (Exception)
             {
-
                 throw;
             }
+        }
+        public string ChangeConnectString(string con)
+        {
+            if (con == conn1) return conn2;
+            else if (con == conn2) return conn3;
+            else return conn1;
         }
     }
 }

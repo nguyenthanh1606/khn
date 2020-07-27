@@ -19,8 +19,8 @@ namespace khanhhoi.vn.Services
         private Repository_khndb4 Repository;
         public UserService()
         {
-            String connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
-            Repository = new Repository_khndb4(connectionString);
+            //String connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
+            Repository = new Repository_khndb4();
         }
         
 

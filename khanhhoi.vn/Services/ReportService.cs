@@ -18,8 +18,8 @@ namespace khanhhoi.vn.Services
         private IList<tempdatesave> list_dataID = new List<tempdatesave>();
         public ReportService()
         {
-            String connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
-            Repository = new Repository_khndb4(connectionString);
+            //String connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
+            Repository = new Repository_khndb4();
             //Repository_back = new Services_khndb4_backup();
             backupServiceT = new Services_khndb4_backupT();
 

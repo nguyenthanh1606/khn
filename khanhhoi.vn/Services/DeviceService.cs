@@ -15,8 +15,7 @@ namespace khanhhoi.vn.Services
 
         public DeviceService()
         {
-            String connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SeagullDB"].ConnectionString;
-            Repository = new Repository_khndb4(connectionString);
+            Repository = new Repository_khndb4();
         }
 
         public Device sp_getdevice_by_imei(String imei)
